@@ -7,7 +7,7 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
   <style>
     body { margin: 0; background: #FBF9F5; color: #16130F; font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
     * { box-sizing: border-box; }
@@ -43,6 +43,7 @@
         <span class="serif" style="font-size: 26px; color: var(--accent);">01</span>
         <span style="width: 28px; height: 1px; background: #D6CFC3;"></span>
         <span class="eyebrow">Case study</span>
+        <span class="ph" style="font-size: 12px;">Sample write-up</span>
       </div>
       <h1 class="serif" style="margin: 0; font-size: 88px; line-height: .98; letter-spacing: -.025em; max-width: 15ch; text-wrap: balance;">
         <span class="ph" style="border-bottom-width: 2px;">[Project Name]</span> — a billing engine that never double-charges.
@@ -151,15 +152,15 @@
         <div style="display: flex; flex-direction: column; gap: 32px;">
           <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;">
             <div style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #16130F; padding-top: 20px;">
-              <span class="serif" style="font-size: 52px; line-height: 1; letter-spacing: -.02em;"><span class="ph" style="border-bottom: none;">[00]</span></span>
+              <span class="serif" style="font-size: 52px; line-height: 1; letter-spacing: -.02em;"><span class="ph">[00]</span></span>
               <span style="font-size: 14px; color: #6B645C; line-height: 1.55;">Duplicate charges since launch</span>
             </div>
             <div style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #16130F; padding-top: 20px;">
-              <span class="serif" style="font-size: 52px; line-height: 1; letter-spacing: -.02em;"><span class="ph" style="border-bottom: none;">[XX%]</span></span>
+              <span class="serif" style="font-size: 52px; line-height: 1; letter-spacing: -.02em;"><span class="ph">[XX%]</span></span>
               <span style="font-size: 14px; color: #6B645C; line-height: 1.55;">Drop in failed-payment support tickets</span>
             </div>
             <div style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #16130F; padding-top: 20px;">
-              <span class="serif" style="font-size: 52px; line-height: 1; letter-spacing: -.02em;"><span class="ph" style="border-bottom: none;">[XXms]</span></span>
+              <span class="serif" style="font-size: 52px; line-height: 1; letter-spacing: -.02em;"><span class="ph">[XXms]</span></span>
               <span style="font-size: 14px; color: #6B645C; line-height: 1.55;">Median webhook acknowledgement</span>
             </div>
           </div>
@@ -186,7 +187,7 @@
   </div>
 
   <!-- NEXT -->
-  <div style="max-width: 1216px; margin: 96px auto 0; padding: 0 112px;">
+  <div style="max-width: 1216px; margin: 0 auto; padding: 96px 112px 0;">
     <a href="#top" style="display: flex; align-items: center; justify-content: space-between; gap: 40px; border-top: 1px solid #E2DCD2; padding: 44px 0 96px;">
       <div style="display: flex; flex-direction: column; gap: 12px;">
         <span class="eyebrow">Next project</span>
@@ -203,7 +204,7 @@
     <div style="max-width: 1216px; margin: 0 auto; padding: 56px 112px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
       <span class="serif" style="font-size: 26px;">Sudhanshu<span style="color: var(--accent);">.</span></span>
       <a href="#top" style="color: #FBF9F5; font-size: 15px; font-weight: 500; display: inline-flex; align-items: center; gap: 9px;">
-        <span class="ph" style="color: #E8B88A; border-bottom: none;">[you@email.com]</span>
+        <span class="ph" style="color: #FBF9F5; border-bottom: 1px dotted #6B645C;">[you@email.com]</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
       </a>
     </div>
@@ -211,7 +212,7 @@
 
 </div>
 </x-dc>
-<script data-dc-script data-props='{"accent":{"editor":"color","default":"#C0502C","options":["#C0502C","#1F5C4A","#2D4A7C","#8A5A2B"],"section":"Theme"},"$preview":{"width":1440,"height":3600}}'>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#C0502C","options":["#C0502C","#1F5C4A","#2D4A7C","#8A5A2B"],"section":"Theme"},"$preview":{"width":1440,"height":3800}}'>
 class Component extends DCLogic {
   renderVals() {
     return { accent: this.props.accent ?? '#C0502C' };

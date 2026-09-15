@@ -7,7 +7,7 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
   <style>
     body { margin: 0; background: #FBF9F5; color: #16130F; font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
     * { box-sizing: border-box; }
@@ -25,15 +25,15 @@
   </style>
 </helmet>
 
-<div style="--accent: {{accent}}; --accent-deep: {{accentDeep}}; background: #FBF9F5;">
+<div style="--accent: {{accent}}; background: #FBF9F5;">
 
   <!-- NAV -->
   <div style="position: sticky; top: 0; z-index: 20; background: rgba(251,249,245,.88); backdrop-filter: blur(12px); border-bottom: 1px solid #E8E2D8;">
     <div style="max-width: 1216px; margin: 0 auto; padding: 0 112px; height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
       <a href="#top" class="serif" style="font-size: 26px; letter-spacing: -.01em;">Sudhanshu<span style="color: var(--accent);">.</span></a>
       <div style="display: flex; align-items: center; gap: 36px;">
-        <a href="#work" style="font-size: 14px; font-weight: 500;">Work</a>
         <a href="#about" style="font-size: 14px; font-weight: 500;">About</a>
+        <a href="#work" style="font-size: 14px; font-weight: 500;">Work</a>
         <a href="#experience" style="font-size: 14px; font-weight: 500;">Experience</a>
         <a href="#contact" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 20px; border: 1px solid #16130F; border-radius: 999px; font-size: 14px; font-weight: 500;">
           Get in touch
@@ -75,7 +75,7 @@
         </div>
         <div style="display: flex; flex-direction: column; gap: 7px;">
           <div class="eyebrow">Based in</div>
-          <div style="font-size: 15px;"><span class="ph">[City, India]</span></div>
+          <div style="font-size: 15px;"><span class="ph">[City]</span></div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 7px;">
           <div class="eyebrow">Status</div>
@@ -135,9 +135,12 @@
           <div class="eyebrow">02 — Selected work</div>
           <h2 class="serif" style="margin: 0; font-size: 62px; line-height: 1.02; letter-spacing: -.02em;">Things I've built.</h2>
         </div>
-        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #6B645C; max-width: 34ch;">
-          Three projects that show how I think about data, reliability and the boring details that keep a system honest.
-        </p>
+        <div style="display: flex; flex-direction: column; gap: 10px; max-width: 34ch;">
+          <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #6B645C;">
+            Three projects that show how I think about data, reliability and the boring details that keep a system honest.
+          </p>
+          <span class="ph" style="font-size: 13px; line-height: 1.6;">Sample projects — replace with your own.</span>
+        </div>
       </div>
     </div>
 
@@ -221,7 +224,10 @@
   <div style="background: #F6F2EB; border-top: 1px solid #E8E2D8; border-bottom: 1px solid #E8E2D8;">
     <div style="max-width: 1216px; margin: 0 auto; padding: 104px 112px;">
       <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px;">
-        <div class="eyebrow" style="padding-top: 10px;">03 — Capabilities</div>
+        <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 10px;">
+          <div class="eyebrow">03 — Capabilities</div>
+          <span class="ph" style="font-size: 13px; line-height: 1.5;">Drafted list — confirm each line.</span>
+        </div>
         <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px;">
 
           <div style="display: flex; flex-direction: column; gap: 18px;">
@@ -276,7 +282,7 @@
           <div style="display: flex; flex-direction: column; gap: 10px;">
             <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -.01em;"><span class="ph">[Job Title]</span></h3>
             <div style="font-size: 15px; color: var(--accent); font-weight: 500;"><span class="ph">[Company Name]</span> · <span class="ph">[City]</span></div>
-            <p style="margin: 4px 0 0; font-size: 16px; line-height: 1.7; color: #4A443C; max-width: 62ch;">
+            <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4A443C; max-width: 62ch;">
               <span class="ph">[One or two lines: what you own, the scale you work at, and one outcome you're proud of.]</span>
             </p>
           </div>
@@ -287,7 +293,7 @@
           <div style="display: flex; flex-direction: column; gap: 10px;">
             <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -.01em;"><span class="ph">[Job Title]</span></h3>
             <div style="font-size: 15px; color: var(--accent); font-weight: 500;"><span class="ph">[Company Name]</span> · <span class="ph">[City]</span></div>
-            <p style="margin: 4px 0 0; font-size: 16px; line-height: 1.7; color: #4A443C; max-width: 62ch;">
+            <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4A443C; max-width: 62ch;">
               <span class="ph">[What you built there, and what it changed.]</span>
             </p>
           </div>
@@ -298,7 +304,7 @@
           <div style="display: flex; flex-direction: column; gap: 10px;">
             <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -.01em;"><span class="ph">[Job Title]</span></h3>
             <div style="font-size: 15px; color: var(--accent); font-weight: 500;"><span class="ph">[Company Name]</span> · <span class="ph">[City]</span></div>
-            <p style="margin: 4px 0 0; font-size: 16px; line-height: 1.7; color: #4A443C; max-width: 62ch;">
+            <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #4A443C; max-width: 62ch;">
               <span class="ph">[Where you started, and the foundation it gave you.]</span>
             </p>
           </div>
@@ -327,10 +333,10 @@
           </h2>
           <p style="margin: 0; font-size: 18px; line-height: 1.7; color: #B5ADA2; max-width: 50ch;">
             Available for <span style="color: #FBF9F5;" class="ph">[full-time roles / freelance projects]</span>.
-            The fastest way to reach me is email — I reply within a day.
+            Email is the fastest way to reach me.
           </p>
-          <a href="#contact" class="serif" style="color: #FBF9F5; font-size: 44px; letter-spacing: -.02em; border-bottom: 1px solid #4A443C; padding-bottom: 12px; width: fit-content;">
-            <span class="ph" style="color: #E8B88A; border-bottom: none;">[you@email.com]</span>
+          <a href="#contact" class="serif" style="color: #FBF9F5; font-size: 44px; letter-spacing: -.02em; padding-bottom: 12px; width: fit-content;">
+            <span class="ph" style="color: #FBF9F5; border-bottom: 1px dotted #6B645C;">[you@email.com]</span>
           </a>
           <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px;">
             <a href="#contact" style="color: #FBF9F5; display: inline-flex; align-items: center; gap: 9px; height: 46px; padding: 0 20px; border: 1px solid #3A352E; border-radius: 999px; font-size: 14px; font-weight: 500;">
@@ -359,12 +365,11 @@
 
 </div>
 </x-dc>
-<script data-dc-script data-props='{"accent":{"editor":"color","default":"#C0502C","options":["#C0502C","#1F5C4A","#2D4A7C","#8A5A2B"],"section":"Theme"},"accentDeep":{"editor":"color","default":"#8F3A1E","section":"Theme"},"$preview":{"width":1440,"height":5200}}'>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#C0502C","options":["#C0502C","#1F5C4A","#2D4A7C","#8A5A2B"],"section":"Theme"},"$preview":{"width":1440,"height":5600}}'>
 class Component extends DCLogic {
   renderVals() {
     return {
-      accent: this.props.accent ?? '#C0502C',
-      accentDeep: this.props.accentDeep ?? '#8F3A1E'
+      accent: this.props.accent ?? '#C0502C'
     };
   }
 }

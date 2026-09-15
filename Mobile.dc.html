@@ -7,7 +7,7 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Schibsted+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
   <style>
     body { margin: 0; background: #FBF9F5; color: #16130F; font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
     * { box-sizing: border-box; }
@@ -15,7 +15,7 @@
     a:hover { color: var(--accent, #C0502C); }
     .mono { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace; }
     .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; font-weight: 400; }
-    .eyebrow { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: #8A8177; }
+    .eyebrow { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #8A8177; }
     .ph { color: #A2723F; border-bottom: 1px dotted #C9AF8C; }
     .thumb { background: #EFE9E0; border: 1px solid #E2DCD2; }
   </style>
@@ -25,7 +25,7 @@
 
   <!-- NAV -->
   <div style="position: sticky; top: 0; z-index: 20; background: rgba(251,249,245,.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E8E2D8; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
-    <a href="#top" class="serif" style="font-size: 22px; letter-spacing: -.01em;">Sudhanshu<span style="color: var(--accent);">.</span></a>
+    <a href="#top" class="serif" style="font-size: 22px; letter-spacing: -.01em; display: inline-flex; align-items: center; height: 44px;">Sudhanshu<span style="color: var(--accent);">.</span></a>
     <a href="#contact" style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: -10px;">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h10"></path></svg>
     </a>
@@ -39,6 +39,7 @@
     </h1>
     <p style="margin: 0; font-size: 16px; line-height: 1.68; color: #4A443C;">
       I design and ship PHP and Laravel systems — APIs, payment flows and data pipelines that stay predictable when traffic doesn't.
+      <span class="ph">[X]</span> years of it, mostly for teams who need the backend to just work.
     </p>
     <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 4px;">
       <a href="#work" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 52px; background: var(--accent); color: #FBF9F5; border-radius: 999px; font-size: 15px; font-weight: 600;">
@@ -58,13 +59,13 @@
 
   <!-- TECH STRIP -->
   <div style="border-top: 1px solid #E8E2D8; border-bottom: 1px solid #E8E2D8; background: #F6F2EB; padding: 18px 20px; display: flex; flex-wrap: wrap; gap: 10px 18px;">
-    <span class="mono" style="font-size: 12px; color: #6B645C;">PHP&nbsp;8</span>
-    <span class="mono" style="font-size: 12px; color: #6B645C;">Laravel</span>
-    <span class="mono" style="font-size: 12px; color: #6B645C;">MySQL</span>
-    <span class="mono" style="font-size: 12px; color: #6B645C;">REST&nbsp;APIs</span>
-    <span class="mono" style="font-size: 12px; color: #6B645C;">Redis</span>
-    <span class="mono" style="font-size: 12px; color: #6B645C;">Docker</span>
-    <span class="mono" style="font-size: 12px; color: #6B645C;">AWS</span>
+    <span class="mono" style="font-size: 13px; color: #6B645C;">PHP&nbsp;8</span>
+    <span class="mono" style="font-size: 13px; color: #6B645C;">Laravel</span>
+    <span class="mono" style="font-size: 13px; color: #6B645C;">MySQL</span>
+    <span class="mono" style="font-size: 13px; color: #6B645C;">REST&nbsp;APIs</span>
+    <span class="mono" style="font-size: 13px; color: #6B645C;">Redis</span>
+    <span class="mono" style="font-size: 13px; color: #6B645C;">Docker</span>
+    <span class="mono" style="font-size: 13px; color: #6B645C;">AWS</span>
   </div>
 
   <!-- ABOUT -->
@@ -85,6 +86,7 @@
   <div id="work" style="border-top: 1px solid #E8E2D8; padding: 56px 20px; display: flex; flex-direction: column; gap: 28px;">
     <div style="display: flex; flex-direction: column; gap: 14px;">
       <div class="eyebrow">02 — Selected work</div>
+      <span class="ph" style="font-size: 13px; line-height: 1.5;">Sample projects — replace with your own.</span>
       <h2 class="serif" style="margin: 0; font-size: 42px; line-height: 1.04; letter-spacing: -.02em;">Things I've built.</h2>
     </div>
 
@@ -94,15 +96,15 @@
       </div>
       <div style="display: flex; align-items: baseline; gap: 12px;">
         <span class="serif" style="font-size: 26px; color: var(--accent); line-height: 1;">01</span>
-        <h3 style="margin: 0; font-size: 21px; font-weight: 600; letter-spacing: -.01em; line-height: 1.3;"><span class="ph">[Project Name]</span> — Subscriptions &amp; payments</h3>
+        <h3 style="margin: 0; font-size: 21px; font-weight: 600; letter-spacing: -.01em; line-height: 1.3;"><span class="ph">[Project Name]</span> — Subscriptions &amp; payments platform</h3>
       </div>
       <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #4A443C;">
         Billing engine with proration, retries and an idempotent webhook layer so a duplicated event never double-charges anyone.
       </p>
       <div style="display: flex; flex-wrap: wrap; gap: 7px;">
-        <span class="mono" style="font-size: 11px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">Laravel</span>
-        <span class="mono" style="font-size: 11px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">MySQL</span>
-        <span class="mono" style="font-size: 11px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">Queues</span>
+        <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">Laravel</span>
+        <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">MySQL</span>
+        <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">Queues</span>
       </div>
       <span style="display: inline-flex; align-items: center; gap: 9px; height: 44px; font-size: 14px; font-weight: 600; color: var(--accent);">
         Read the case study
@@ -122,9 +124,9 @@
         One codebase serving <span class="ph">[N]</span> client workspaces with isolated data, role-based permissions and cached reporting.
       </p>
       <div style="display: flex; flex-wrap: wrap; gap: 7px;">
-        <span class="mono" style="font-size: 11px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">Laravel</span>
-        <span class="mono" style="font-size: 11px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">Vue.js</span>
-        <span class="mono" style="font-size: 11px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">Redis</span>
+        <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">Laravel</span>
+        <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">Vue.js</span>
+        <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">Redis</span>
       </div>
       <span style="display: inline-flex; align-items: center; gap: 9px; height: 44px; font-size: 14px; font-weight: 600; color: var(--accent);">
         Read the case study
@@ -141,12 +143,12 @@
         <h3 style="margin: 0; font-size: 21px; font-weight: 600; letter-spacing: -.01em; line-height: 1.3;"><span class="ph">[Project Name]</span> — Inventory sync API</h3>
       </div>
       <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #4A443C;">
-        REST API reconciling stock across warehouses and storefronts, with replayable jobs and an audit trail for every write.
+        REST API reconciling stock across <span class="ph">[N]</span> warehouses and storefronts, with replayable jobs and an audit trail for every write.
       </p>
       <div style="display: flex; flex-wrap: wrap; gap: 7px;">
-        <span class="mono" style="font-size: 11px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">PHP 8</span>
-        <span class="mono" style="font-size: 11px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">REST</span>
-        <span class="mono" style="font-size: 11px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">AWS</span>
+        <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">PHP 8</span>
+        <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">REST</span>
+        <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 5px 11px;">AWS</span>
       </div>
       <span style="display: inline-flex; align-items: center; gap: 9px; height: 44px; font-size: 14px; font-weight: 600; color: var(--accent);">
         Read the case study
@@ -157,7 +159,10 @@
 
   <!-- CAPABILITIES -->
   <div style="background: #F6F2EB; border-top: 1px solid #E8E2D8; border-bottom: 1px solid #E8E2D8; padding: 52px 20px; display: flex; flex-direction: column; gap: 32px;">
-    <div class="eyebrow">03 — Capabilities</div>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div class="eyebrow">03 — Capabilities</div>
+      <span class="ph" style="font-size: 13px; line-height: 1.5;">Drafted list — confirm each line.</span>
+    </div>
     <div style="display: flex; flex-direction: column; gap: 14px;">
       <h3 class="serif" style="margin: 0; font-size: 23px; letter-spacing: -.01em;">Languages &amp; frameworks</h3>
       <div style="height: 1px; background: #DDD5C9;"></div>
@@ -173,6 +178,7 @@
       <div style="height: 1px; background: #DDD5C9;"></div>
       <div style="display: flex; flex-direction: column; gap: 9px; font-size: 15px; color: #4A443C;">
         <span>MySQL · schema &amp; query tuning</span>
+        <span>PostgreSQL</span>
         <span>Redis · cache &amp; queues</span>
         <span>Docker, Nginx</span>
         <span>AWS · EC2, S3, RDS</span>
@@ -195,24 +201,24 @@
     <div class="eyebrow">04 — Experience</div>
 
     <div style="display: flex; flex-direction: column; gap: 9px; border-top: 1px solid #E2DCD2; padding-top: 22px;">
-      <div class="mono" style="font-size: 12px; color: #8A8177;"><span class="ph">[20XX]</span> — Present</div>
+      <div class="mono" style="font-size: 13px; color: #8A8177;"><span class="ph">[20XX]</span> — Present</div>
       <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -.01em;"><span class="ph">[Job Title]</span></h3>
       <div style="font-size: 14px; color: var(--accent); font-weight: 500;"><span class="ph">[Company Name]</span></div>
-      <p style="margin: 2px 0 0; font-size: 15px; line-height: 1.7; color: #4A443C;"><span class="ph">[What you own, and one outcome you're proud of.]</span></p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A443C;"><span class="ph">[What you own, and one outcome you're proud of.]</span></p>
     </div>
 
     <div style="display: flex; flex-direction: column; gap: 9px; border-top: 1px solid #E2DCD2; padding-top: 22px;">
-      <div class="mono" style="font-size: 12px; color: #8A8177;"><span class="ph">[20XX]</span> — <span class="ph">[20XX]</span></div>
+      <div class="mono" style="font-size: 13px; color: #8A8177;"><span class="ph">[20XX]</span> — <span class="ph">[20XX]</span></div>
       <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -.01em;"><span class="ph">[Job Title]</span></h3>
       <div style="font-size: 14px; color: var(--accent); font-weight: 500;"><span class="ph">[Company Name]</span></div>
-      <p style="margin: 2px 0 0; font-size: 15px; line-height: 1.7; color: #4A443C;"><span class="ph">[What you built there, and what it changed.]</span></p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A443C;"><span class="ph">[What you built there, and what it changed.]</span></p>
     </div>
 
     <div style="display: flex; flex-direction: column; gap: 9px; border-top: 1px solid #E2DCD2; padding-top: 22px;">
-      <div class="mono" style="font-size: 12px; color: #8A8177;"><span class="ph">[20XX]</span> — <span class="ph">[20XX]</span></div>
+      <div class="mono" style="font-size: 13px; color: #8A8177;"><span class="ph">[20XX]</span> — <span class="ph">[20XX]</span></div>
       <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -.01em;"><span class="ph">[Job Title]</span></h3>
       <div style="font-size: 14px; color: var(--accent); font-weight: 500;"><span class="ph">[Company Name]</span></div>
-      <p style="margin: 2px 0 0; font-size: 15px; line-height: 1.7; color: #4A443C;"><span class="ph">[Where you started.]</span></p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #4A443C;"><span class="ph">[Where you started.]</span></p>
     </div>
 
     <div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #E2DCD2; padding-top: 22px;">
@@ -227,10 +233,10 @@
     <div class="eyebrow" style="color: #8A8177;">05 — Contact</div>
     <h2 class="serif" style="margin: 0; font-size: 46px; line-height: 1.02; letter-spacing: -.025em;">Let's build something durable.</h2>
     <p style="margin: 0; font-size: 16px; line-height: 1.7; color: #B5ADA2;">
-      Available for <span style="color: #FBF9F5;" class="ph">[full-time / freelance]</span>. Email is fastest — I reply within a day.
+      Available for <span style="color: #FBF9F5;" class="ph">[full-time roles / freelance projects]</span>. Email is the fastest way to reach me.
     </p>
-    <a href="#contact" class="serif" style="color: #E8B88A; font-size: 28px; letter-spacing: -.01em; border-bottom: 1px solid #4A443C; padding-bottom: 12px;">
-      <span class="ph" style="color: #E8B88A; border-bottom: none;">[you@email.com]</span>
+    <a href="#contact" class="serif" style="color: #FBF9F5; font-size: 28px; letter-spacing: -.01em; padding-bottom: 12px;">
+      <span class="ph" style="color: #FBF9F5; border-bottom: 1px dotted #6B645C;">[you@email.com]</span>
     </a>
     <div style="display: flex; flex-wrap: wrap; gap: 10px;">
       <a href="#contact" style="color: #FBF9F5; display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 18px; border: 1px solid #3A352E; border-radius: 999px; font-size: 14px; font-weight: 500;">
@@ -246,14 +252,14 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"></path><path d="m7 11 5 5 5-5"></path><path d="M5 20h14"></path></svg>
       </a>
     </div>
-    <div style="border-top: 1px solid #2B2721; padding-top: 20px; margin-top: 8px;">
-      <span class="mono" style="font-size: 11px; color: #6B645C;">© 2026 Sudhanshu <span class="ph" style="color: #8A8177;">[Last Name]</span></span>
+    <div style="border-top: 1px solid #2B2721; padding-top: 20px;">
+      <span class="mono" style="font-size: 12px; color: #6B645C;">© 2026 Sudhanshu <span class="ph" style="color: #8A8177;">[Last Name]</span></span>
     </div>
   </div>
 
 </div>
 </x-dc>
-<script data-dc-script data-props='{"accent":{"editor":"color","default":"#C0502C","options":["#C0502C","#1F5C4A","#2D4A7C","#8A5A2B"],"section":"Theme"},"$preview":{"width":390,"height":3400}}'>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#C0502C","options":["#C0502C","#1F5C4A","#2D4A7C","#8A5A2B"],"section":"Theme"},"$preview":{"width":390,"height":5400}}'>
 class Component extends DCLogic {
   renderVals() {
     return { accent: this.props.accent ?? '#C0502C' };
