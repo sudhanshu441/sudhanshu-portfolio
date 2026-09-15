@@ -1,54 +1,23 @@
 {
+  "pages": [
+    { "id": "page-1", "name": "SnapFolio style" },
+    { "id": "page-2", "name": "Editorial (earlier)" }
+  ],
   "artboards": [
-    {
-      "file": "Main.dc.html",
-      "title": "Home — desktop",
-      "x": 0,
-      "y": 0,
-      "w": 1440,
-      "h": 5600
-    },
-    {
-      "file": "CaseStudy.dc.html",
-      "title": "Project detail — desktop",
-      "x": 1600,
-      "y": 0,
-      "w": 1440,
-      "h": 3800
-    },
-    {
-      "file": "Mobile.dc.html",
-      "title": "Home — mobile",
-      "x": 3200,
-      "y": 0,
-      "w": 390,
-      "h": 5400
-    }
+    { "file": "Main.dc.html", "title": "Home — desktop", "page": "page-1", "x": 0, "y": 0, "w": 1440, "h": 8800 },
+    { "file": "Detail.dc.html", "title": "Portfolio details — desktop", "page": "page-1", "x": 1600, "y": 0, "w": 1440, "h": 2600 },
+    { "file": "Phone.dc.html", "title": "Home — mobile", "page": "page-1", "x": 3200, "y": 0, "w": 390, "h": 7600 },
+
+    { "file": "EditorialHome.dc.html", "title": "Home — desktop", "page": "page-2", "x": 0, "y": 0, "w": 1440, "h": 5600 },
+    { "file": "EditorialCase.dc.html", "title": "Case study — desktop", "page": "page-2", "x": 1600, "y": 0, "w": 1440, "h": 3800 },
+    { "file": "EditorialPhone.dc.html", "title": "Home — mobile", "page": "page-2", "x": 3200, "y": 0, "w": 390, "h": 5400 }
   ],
   "annotations": [
-    {
-      "id": "how-to-read",
-      "x": -420,
-      "y": 0,
-      "w": 340,
-      "text": "Sudhanshu — portfolio prototype\n\nLight editorial direction: warm paper, deep ink, one clay accent.\n\nType: Instrument Serif (display) + Schibsted Grotesk (body) + JetBrains Mono (labels)."
-    },
-    {
-      "id": "placeholders",
-      "x": -420,
-      "y": 300,
-      "w": 340,
-      "text": "Anything in [square brackets] with a dotted underline is a placeholder waiting on your real LinkedIn details — name, companies, dates, city, email, metrics.\n\nThe project write-ups are drafted examples for a PHP/Laravel backend role. Swap in your actual projects."
-    },
-    {
-      "id": "accent-note",
-      "x": -420,
-      "y": 640,
-      "w": 340,
-      "text": "Each artboard has an accent colour control above it — four presets (clay, forest, indigo, bronze) or pick your own."
-    }
+    { "id": "snap-note", "page": "page-1", "x": -430, "y": 0, "w": 350, "text": "SnapFolio direction\n\nRebuilt from the template you sent, using its real values: #1f1f1f canvas, #232323 surfaces, #ececec accent, Roboto / Ubuntu / Nunito, 300px fixed sidebar nav, 60px section padding.\n\nSame section order as the template: hero, about, stats, skills, resume, portfolio, services, testimonials, contact." },
+    { "id": "snap-placeholders", "page": "page-1", "x": -430, "y": 340, "w": 350, "text": "Anything in [square brackets] with a dotted underline is waiting on your real details — surname, companies, dates, city, email, phone, photos, screenshots and every number.\n\nThe skill bars are set to sample lengths. Set each one to a level you'd defend in an interview, or drop the percentages entirely." },
+    { "id": "snap-accent", "page": "page-1", "x": -430, "y": 700, "w": 350, "text": "SnapFolio's accent is near-white (#ececec), so the whole thing reads monochrome.\n\nEach artboard has an accent control above it with three colour presets if you'd rather not stay grey." },
+    { "id": "snap-license", "page": "page-1", "x": -430, "y": 1000, "w": 350, "text": "Licence note: SnapFolio is a BootstrapMade template. Its free licence requires keeping the \"Designed by BootstrapMade\" credit in the footer — it's in the mockup. Buying the pro licence lets you remove it." },
+    { "id": "editorial-note", "page": "page-2", "x": -430, "y": 0, "w": 350, "text": "The first direction — light editorial, warm paper and ink with one clay accent.\n\nKept here so you can compare. Say the word and I'll delete it." }
   ],
-  "launch": {
-    "view": "canvas"
-  }
+  "launch": { "view": "canvas", "page": "page-1" }
 }

@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Ubuntu:wght@400;500;700&amp;family=Nunito:wght@400;600;700&amp;display=swap">
+  <style>
+    body { margin: 0; background: #1f1f1f; color: #ffffff; font-family: 'Roboto', system-ui, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    * { box-sizing: border-box; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Ubuntu', sans-serif; color: #ffffff; margin: 0; }
+    p { margin: 0; }
+    a { color: var(--accent); text-decoration: none; transition: .3s; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    .shell { display: flex; align-items: flex-start; }
+    .sidebar { width: 300px; flex: none; padding: 0 15px; position: sticky; top: 24px; }
+    .sidebar-card { background: #1b1b1b; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; padding: 15px; }
+    .navmenu a { font-family: 'Nunito', sans-serif; font-size: 16px; color: rgba(236,236,236,.59); padding: 15px 10px; display: flex; align-items: center; gap: 10px; }
+    .navmenu a.active { color: #ffffff; }
+    .navmenu a.active .navicon { color: var(--accent); }
+    .navicon { width: 20px; height: 20px; flex: none; color: rgba(236,236,236,.59); }
+    .main { flex: 1; min-width: 0; margin-left: 30px; }
+    .section { padding: 60px 0; background: #1f1f1f; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 12px; }
+    .ph { color: var(--ph); border-bottom: 1px dotted color-mix(in srgb, var(--ph), transparent 50%); }
+    .grid { display: grid; }
+    .info-card { padding: 30px; background: #232323; border-radius: 8px; }
+  </style>
+</helmet>
+
+<div style="--accent: {{accent}}; --ph: {{phColor}}; background: #1f1f1f;">
+<div class="shell">
+
+  <div class="sidebar">
+    <div class="sidebar-card">
+      <ul class="navmenu">
+        <li><a href="#top">
+          <svg class="navicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"></path><path d="M5 9.5V21h14V9.5"></path></svg>
+          Home</a></li>
+        <li><a href="#top">
+          <svg class="navicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"></path></svg>
+          About</a></li>
+        <li><a href="#top">
+          <svg class="navicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v4h4"></path><path d="M9 12h6"></path><path d="M9 16h6"></path></svg>
+          Resume</a></li>
+        <li><a href="#top" class="active">
+          <svg class="navicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><circle cx="9" cy="10" r="1.6"></circle><path d="m4 17 5-4 4 3 3-2 4 3"></path></svg>
+          Portfolio</a></li>
+        <li><a href="#top">
+          <svg class="navicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="2"></rect><rect x="3" y="14" width="18" height="6" rx="2"></rect><path d="M7 7h.01"></path><path d="M7 17h.01"></path></svg>
+          Services</a></li>
+        <li><a href="#top">
+          <svg class="navicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></svg>
+          Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main" id="top">
+
+    <!-- PAGE TITLE -->
+    <div style="background: #1b1b1b; padding: 40px 0; border-bottom: 1px solid rgba(255,255,255,.08);">
+      <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+        <h1 style="font-size: 32px; font-weight: 700;">Portfolio Details</h1>
+        <ul style="display: flex; align-items: center; gap: 10px; font-size: 15px; color: rgba(255,255,255,.65);">
+          <li><a href="#top">Home</a></li>
+          <li>/</li>
+          <li><a href="#top">Portfolio</a></li>
+          <li>/</li>
+          <li style="color: #ffffff;">Details</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="grid" style="grid-template-columns: 8fr 4fr; gap: 24px; align-items: start;">
+
+          <!-- SLIDER -->
+          <div>
+            <div style="position: relative; overflow: hidden; border-radius: 8px; background: #2c2c2c; border: 1px solid rgba(255,255,255,.08); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;">
+              <span class="ph" style="font-size: 14px;">[Project screenshot — 16:9]</span>
+              <div style="position: absolute; bottom: 20px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px;">
+                <span style="width: 12px; height: 12px; border-radius: 50%; background: var(--accent);"></span>
+                <span style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,.45);"></span>
+                <span style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,.45);"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT INFO -->
+          <div class="info-card">
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.1);">Project Information</h3>
+            <ul>
+              <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.1); font-size: 15px;"><strong style="font-weight: 700;">Category</strong>: API Development</li>
+              <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.1); font-size: 15px;"><strong style="font-weight: 700;">Client</strong>: <span class="ph">[Client or Company]</span></li>
+              <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.1); font-size: 15px;"><strong style="font-weight: 700;">Project date</strong>: <span class="ph">[Month 20XX]</span></li>
+              <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.1); font-size: 15px;"><strong style="font-weight: 700;">Role</strong>: <span class="ph">[Backend Engineer]</span></li>
+              <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.1); font-size: 15px;"><strong style="font-weight: 700;">Stack</strong>: Laravel, MySQL, Redis</li>
+              <li style="padding: 10px 0; font-size: 15px;"><strong style="font-weight: 700;">URL</strong>: <a href="#top"><span class="ph">[project-url.com]</span></a></li>
+            </ul>
+            <a href="#top" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-top: 24px; width: 100%; padding: 14px 24px; background: var(--accent); color: #310606; border-radius: 6px; font-weight: 600;">
+              Visit Project
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- OVERVIEW -->
+        <div style="margin-top: 50px; max-width: 900px;">
+          <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 16px;">Project Overview</h2>
+          <div style="display: flex; flex-direction: column; gap: 14px; color: rgba(255,255,255,.82); line-height: 1.8; font-size: 16px;">
+            <p><span class="ph">[What the project was, who it was for, and what problem it solved. Two or three sentences.]</span></p>
+            <p><span class="ph">[What you specifically built, and one decision you'd defend in an interview.]</span></p>
+          </div>
+        </div>
+
+        <!-- KEY FEATURES -->
+        <div style="margin-top: 50px;">
+          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 24px;">Key Features</h3>
+          <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 24px;">
+            <sc-for list="{{features}}" as="f" hint-placeholder-count="4">
+              <div style="display: flex; gap: 18px; background: #232323; border-radius: 8px; padding: 24px;">
+                <div style="width: 52px; height: 52px; border-radius: 10px; flex: none; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--accent), transparent 88%);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"></path></svg>
+                </div>
+                <div>
+                  <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">{{f.title}}</h4>
+                  <p style="color: rgba(255,255,255,.78); line-height: 1.7; font-size: 15px;">{{f.body}}</p>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div style="margin-top: 50px; background: #232323; border-radius: 15px; padding: 40px;">
+          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 24px;">Results</h3>
+          <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 24px;">
+            <div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 40px; font-weight: 700; color: var(--accent); line-height: 1;"><span class="ph">[00]</span></div>
+              <p style="margin-top: 8px; color: rgba(255,255,255,.7); font-size: 15px;"><span class="ph">[What this number measures]</span></p>
+            </div>
+            <div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 40px; font-weight: 700; color: var(--accent); line-height: 1;"><span class="ph">[00%]</span></div>
+              <p style="margin-top: 8px; color: rgba(255,255,255,.7); font-size: 15px;"><span class="ph">[What this number measures]</span></p>
+            </div>
+            <div>
+              <div style="font-family: 'Ubuntu', sans-serif; font-size: 40px; font-weight: 700; color: var(--accent); line-height: 1;"><span class="ph">[00ms]</span></div>
+              <p style="margin-top: 8px; color: rgba(255,255,255,.7); font-size: 15px;"><span class="ph">[What this number measures]</span></p>
+            </div>
+          </div>
+          <p style="margin-top: 24px; color: rgba(255,255,255,.6); font-size: 14px; line-height: 1.7;">
+            <span class="ph">[Only keep numbers you can stand behind. No metrics? Replace this block with a short paragraph on what changed for the team.]</span>
+          </p>
+        </div>
+
+        <!-- NEXT -->
+        <div style="margin-top: 50px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid rgba(255,255,255,.1); padding-top: 32px;">
+          <a href="#top" style="display: inline-flex; align-items: center; gap: 10px; color: #ffffff; font-size: 15px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+            Back to Portfolio
+          </a>
+          <a href="#top" style="display: inline-flex; align-items: center; gap: 10px; color: var(--accent); font-size: 15px; font-weight: 600;">
+            Next Project
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="background: #1b1b1b; padding: 40px 0 32px;">
+      <div class="container" style="text-align: center;">
+        <p style="color: rgba(255,255,255,.8); margin-bottom: 8px;">© <span>Copyright</span> <strong style="padding: 0 4px;">Sudhanshu <span class="ph">[Surname]</span></strong> <span>All Rights Reserved</span></p>
+        <p style="color: rgba(255,255,255,.55); font-size: 14px;">Design based on the <a href="#top">SnapFolio</a> template by BootstrapMade</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#ececec","options":["#ececec","#38d39f","#4a9cff","#ffb648"],"section":"Theme"},"phColor":{"editor":"color","default":"#d6a15c","section":"Theme"},"$preview":{"width":1440,"height":2600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#ececec',
+      phColor: this.props.phColor ?? '#d6a15c',
+      features: [
+        { title: 'Idempotent webhooks', body: 'Every inbound event is keyed and deduped, so a replay resolves to the same record instead of a new one.' },
+        { title: 'Role-based access', body: 'Permissions checked at the policy layer, with an audit trail on every privileged write.' },
+        { title: 'Query performance', body: 'Indexed hot paths and cached aggregates so reporting never touches the primary under load.' },
+        { title: 'Queued jobs', body: 'Long work moved off the request cycle with backoff, retries and a dead-letter queue.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

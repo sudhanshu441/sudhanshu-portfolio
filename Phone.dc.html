@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Ubuntu:wght@400;500;700&amp;family=Nunito:wght@400;600;700&amp;display=swap">
+  <style>
+    body { margin: 0; background: #1f1f1f; color: #ffffff; font-family: 'Roboto', system-ui, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    * { box-sizing: border-box; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Ubuntu', sans-serif; color: #ffffff; margin: 0; }
+    p { margin: 0; }
+    a { color: var(--accent); text-decoration: none; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    .section { padding: 48px 0; background: #1f1f1f; }
+    .light-background { background: #2c2c2c; }
+    .container { padding: 0 20px; }
+    .section-title { text-align: center; padding-bottom: 36px; }
+    .section-title h2 { font-size: 28px; font-weight: 700; display: inline-flex; align-items: center; }
+    .section-title h2:before, .section-title h2:after { content: ""; width: 34px; height: 2px; background: var(--accent); display: inline-block; }
+    .section-title h2:before { margin: 0 12px 8px 0; }
+    .section-title h2:after { margin: 0 0 8px 12px; }
+    .section-title p { color: rgba(255,255,255,.8); line-height: 1.7; font-size: 15px; margin-top: 10px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 14px 28px; font-size: 16px; font-weight: 600; border-radius: 50px; border: 2px solid; }
+    .btn-primary { background: var(--accent); color: #310606; border-color: var(--accent); }
+    .btn-outline { background: transparent; color: var(--accent); border-color: var(--accent); }
+    .ph { color: var(--ph); border-bottom: 1px dotted color-mix(in srgb, var(--ph), transparent 50%); }
+    .ph-dark { color: #7a2c2c; border-bottom: 1px dotted rgba(49,6,6,.45); }
+    .progress { height: 8px; background: color-mix(in srgb, var(--accent), transparent 90%); border-radius: 20px; overflow: hidden; }
+    .progress-bar { background: var(--accent); height: 100%; border-radius: 20px; }
+    .grid { display: grid; }
+  </style>
+</helmet>
+
+<div style="--accent: {{accent}}; --ph: {{phColor}}; background: #1f1f1f; width: 390px; position: relative;">
+
+  <!-- floating menu toggle (SnapFolio's mobile pattern) -->
+  <div style="position: sticky; top: 0; z-index: 30; height: 0;">
+    <div style="display: flex; justify-content: flex-end; padding: 15px;">
+      <a href="#hero" style="width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #310606; display: inline-flex; align-items: center; justify-content: center;" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div id="hero" class="section" style="position: relative; overflow: hidden; padding-top: 64px;">
+    <div style="position: absolute; inset: 0; overflow: hidden;">
+      <div style="position: absolute; width: 220px; height: 220px; top: 6%; right: -60px; border-radius: 50%; background: linear-gradient(45deg, color-mix(in srgb, var(--accent), transparent 90%), color-mix(in srgb, var(--accent), transparent 95%));"></div>
+      <div style="position: absolute; width: 150px; height: 150px; bottom: 12%; left: -50px; border-radius: 50%; background: linear-gradient(45deg, color-mix(in srgb, var(--accent), transparent 90%), color-mix(in srgb, var(--accent), transparent 95%));"></div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <div style="position: relative; width: 240px; height: 240px; margin-bottom: 28px;">
+        <div style="position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(135deg, color-mix(in srgb, var(--accent), transparent 85%), color-mix(in srgb, var(--accent), transparent 95%));"></div>
+        <div style="position: absolute; inset: 16px; border-radius: 50%; background: #232323; border: 1px solid rgba(255,255,255,.12); display: flex; align-items: center; justify-content: center;">
+          <span class="ph" style="font-size: 13px;">[Your photo]</span>
+        </div>
+      </div>
+
+      <h1 style="font-size: 44px; font-weight: 800; line-height: 1.1; margin-bottom: 12px;">
+        Sudhanshu<span style="color: var(--accent); display: inline-block; position: relative;">
+          <span class="ph">[Surname]</span>
+          <span style="position: absolute; bottom: -4px; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent), transparent 50%));"></span>
+        </span>
+      </h1>
+      <h2 style="font-size: 24px; font-weight: 600; margin-bottom: 10px;">Backend Engineer</h2>
+      <p style="font-size: 19px; margin-bottom: 18px;">
+        I build with <span style="color: var(--accent); font-weight: 600; border-bottom: 2px solid var(--accent); padding-bottom: 2px;">PHP &amp; Laravel</span>
+      </p>
+      <p style="font-size: 16px; line-height: 1.65; color: rgba(255,255,255,.8); margin-bottom: 28px;">
+        <span class="ph">[Two lines in your own words: what you build, who for, and what you're best at.]</span>
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 12px; width: 100%; margin-bottom: 28px;">
+        <a href="#portfolio" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+
+      <div style="display: flex; gap: 14px;">
+        <a href="#hero" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: #232323; color: rgba(255,255,255,.6); border-radius: 50%;" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"></path></svg></a>
+        <a href="#hero" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: #232323; color: rgba(255,255,255,.6); border-radius: 50%;" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm6.5 0h3.8v1.71h.05c.53-.95 1.83-1.96 3.76-1.96 4.02 0 4.76 2.5 4.76 5.76V21h-4v-5.6c0-1.34-.03-3.07-1.9-3.07-1.9 0-2.19 1.46-2.19 2.97V21h-4V9Z"></path></svg></a>
+        <a href="#hero" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: #232323; color: rgba(255,255,255,.6); border-radius: 50%;" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.2l-7 8 8.3 10h-6.5l-5-6.2-5.8 6.2H1.5l7.5-8.5L1 3h6.7l4.6 5.7L17.5 3Zm-1.1 16h1.8L7.7 4.8H5.8L16.4 19Z"></path></svg></a>
+        <a href="#contact" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: #232323; color: rgba(255,255,255,.6); border-radius: 50%;" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" class="section">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, #232323 0%, color-mix(in srgb, #232323, var(--accent) 5%) 100%); border-radius: 24px; padding: 28px; text-align: center; border: 1px solid color-mix(in srgb, var(--accent), transparent 90%); position: relative; overflow: hidden; margin-bottom: 32px;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent), #ffffff 30%));"></div>
+        <div style="position: relative; margin-bottom: 20px;">
+          <div style="width: 140px; height: 140px; margin: 0 auto; border-radius: 50%; border: 4px solid var(--accent); background: #2c2c2c; display: flex; align-items: center; justify-content: center;">
+            <span class="ph" style="font-size: 13px;">[Photo]</span>
+          </div>
+        </div>
+        <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 6px;">Sudhanshu <span class="ph">[Surname]</span></h3>
+        <p style="color: var(--accent); font-weight: 500; margin-bottom: 22px;">PHP &amp; Laravel Developer</p>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="#contact" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 12px 16px; background: color-mix(in srgb, #232323, #1f1f1f 50%); border-radius: 12px; color: #ffffff; border: 1px solid rgba(255,255,255,.1); font-size: 15px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex: none;"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></svg>
+            <span class="ph">[you@email.com]</span>
+          </a>
+          <a href="#contact" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 12px 16px; background: color-mix(in srgb, #232323, #1f1f1f 50%); border-radius: 12px; color: #ffffff; border: 1px solid rgba(255,255,255,.1); font-size: 15px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex: none;"><path d="M6 3h3l2 5-2.2 1.3a13 13 0 0 0 5.9 5.9L16 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4 5.2 2 2 0 0 1 6 3Z"></path></svg>
+            <span class="ph">[+91 00000 00000]</span>
+          </a>
+          <a href="#contact" style="display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 12px 16px; background: color-mix(in srgb, #232323, #1f1f1f 50%); border-radius: 12px; color: #ffffff; border: 1px solid rgba(255,255,255,.1); font-size: 15px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex: none;"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+            <span class="ph">[City, Country]</span>
+          </a>
+        </div>
+      </div>
+
+      <span style="display: inline-block; background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent), #ffffff 20%)); color: #310606; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 6px 14px; border-radius: 50px; margin-bottom: 14px;">Get to Know Me</span>
+      <h2 style="font-size: 26px; font-weight: 700; line-height: 1.3; margin-bottom: 16px;">Backend systems that stay predictable under load</h2>
+      <div style="display: flex; flex-direction: column; gap: 14px; color: rgba(255,255,255,.82); line-height: 1.75; font-size: 16px; margin-bottom: 26px;">
+        <p><span class="ph">[Paragraph one: how you got into backend work and the problems you like solving.]</span></p>
+        <p><span class="ph">[Paragraph two: how you work with a team, and what you want to do next.]</span></p>
+      </div>
+
+      <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 26px;">
+        <div>
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1;"><span class="ph">[00]</span></div>
+          <div style="font-size: 13px; color: rgba(255,255,255,.7); margin-top: 6px; line-height: 1.4;">Projects Shipped</div>
+        </div>
+        <div>
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1;"><span class="ph">[0]</span></div>
+          <div style="font-size: 13px; color: rgba(255,255,255,.7); margin-top: 6px; line-height: 1.4;">Years Experience</div>
+        </div>
+        <div>
+          <div style="font-family: 'Ubuntu', sans-serif; font-size: 28px; font-weight: 700; color: var(--accent); line-height: 1;"><span class="ph">[00]</span></div>
+          <div style="font-size: 13px; color: rgba(255,255,255,.7); margin-top: 6px; line-height: 1.4;">APIs Built</div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <a href="#resume" class="btn btn-primary">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"></path><path d="m7 11 5 5 5-5"></path><path d="M5 20h14"></path></svg>
+          Download Resume
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"></path></svg>
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="section light-background">
+    <div class="container">
+      <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 14px;">
+        <div style="background: #323232; border-radius: 15px; padding: 26px 16px; text-align: center;">
+          <div style="width: 52px; height: 52px; margin: 0 auto 12px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--accent), transparent 85%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg>
+          </div>
+          <span style="font-family: 'Ubuntu', sans-serif; font-size: 32px; font-weight: 700; display: block; line-height: 1;"><span class="ph">[00]</span></span>
+          <p style="margin-top: 8px; color: rgba(255,255,255,.75); font-size: 14px;">Projects Delivered</p>
+        </div>
+        <div style="background: #323232; border-radius: 15px; padding: 26px 16px; text-align: center;">
+          <div style="width: 52px; height: 52px; margin: 0 auto 12px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, #ff7e00, transparent 85%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff9e3d" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m9 8-5 4 5 4"></path><path d="m15 8 5 4-5 4"></path></svg>
+          </div>
+          <span style="font-family: 'Ubuntu', sans-serif; font-size: 32px; font-weight: 700; display: block; line-height: 1;"><span class="ph">[00]</span></span>
+          <p style="margin-top: 8px; color: rgba(255,255,255,.75); font-size: 14px;">APIs in Production</p>
+        </div>
+        <div style="background: #323232; border-radius: 15px; padding: 26px 16px; text-align: center;">
+          <div style="width: 52px; height: 52px; margin: 0 auto 12px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, #00c875, transparent 85%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3ad898" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="8" ry="3"></ellipse><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"></path><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg>
+          </div>
+          <span style="font-family: 'Ubuntu', sans-serif; font-size: 32px; font-weight: 700; display: block; line-height: 1;"><span class="ph">[00]</span></span>
+          <p style="margin-top: 8px; color: rgba(255,255,255,.75); font-size: 14px;">Databases Designed</p>
+        </div>
+        <div style="background: #323232; border-radius: 15px; padding: 26px 16px; text-align: center;">
+          <div style="width: 52px; height: 52px; margin: 0 auto 12px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, #6a8cff, transparent 85%);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#93aaff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.4"></circle><path d="M2 20c0-3.3 3.1-5.5 7-5.5s7 2.2 7 5.5"></path><path d="M17 11a3 3 0 1 0-1.8-5.4"></path><path d="M18 14.6c2.4.5 4 2.2 4 4.4"></path></svg>
+          </div>
+          <span style="font-family: 'Ubuntu', sans-serif; font-size: 32px; font-weight: 700; display: block; line-height: 1;"><span class="ph">[00]</span></span>
+          <p style="margin-top: 8px; color: rgba(255,255,255,.75); font-size: 14px;">Happy Clients</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div id="skills" class="section">
+    <div class="container section-title">
+      <h2>Skills</h2>
+      <p>The stack I reach for day to day.</p>
+    </div>
+    <div class="container" style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="background: #232323; border-radius: 8px; padding: 24px;">
+        <h3 style="font-size: 21px; margin-bottom: 22px; padding-bottom: 14px; position: relative;">
+          Back-end Development
+          <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: var(--accent);"></span>
+        </h3>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <sc-for list="{{backend}}" as="s" hint-placeholder-count="4">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <h4 style="font-size: 16px;">{{s.name}}</h4>
+                <span style="font-size: 14px; color: rgba(255,255,255,.7);"><span class="ph">[00%]</span></span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: {{s.pct}};"></div></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="background: #232323; border-radius: 8px; padding: 24px;">
+        <h3 style="font-size: 21px; margin-bottom: 22px; padding-bottom: 14px; position: relative;">
+          Tooling &amp; Front-end
+          <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: var(--accent);"></span>
+        </h3>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <sc-for list="{{tooling}}" as="s" hint-placeholder-count="4">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <h4 style="font-size: 16px;">{{s.name}}</h4>
+                <span style="font-size: 14px; color: rgba(255,255,255,.7);"><span class="ph">[00%]</span></span>
+              </div>
+              <div class="progress"><div class="progress-bar" style="width: {{s.pct}};"></div></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUME -->
+  <div id="resume" class="section">
+    <div class="container section-title">
+      <h2>Resume</h2>
+      <p>Where I've worked and what I studied.</p>
+    </div>
+    <div class="container">
+      <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg>
+        Professional Experience
+      </h3>
+      <div style="display: flex; flex-direction: column; gap: 26px; margin-bottom: 36px;">
+        <sc-for list="{{jobs}}" as="j" hint-placeholder-count="3">
+          <div style="padding-left: 20px; border-left: 2px solid color-mix(in srgb, var(--accent), transparent 80%); position: relative;">
+            <span style="position: absolute; width: 14px; height: 14px; border-radius: 50%; left: -8px; top: 0; background: var(--accent);"></span>
+            <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 6px;"><span class="ph">[Job Title]</span></h4>
+            <h5 style="font-size: 15px; color: var(--accent); margin-bottom: 6px; font-weight: 500;">{{j.dates}}</h5>
+            <p style="font-size: 14px; color: rgba(255,255,255,.65); margin-bottom: 10px;"><span class="ph">[Company Name, City]</span></p>
+            <p style="font-size: 15px; line-height: 1.7; color: rgba(255,255,255,.82);"><span class="ph">[What you owned there, and one outcome you're proud of.]</span></p>
+          </div>
+        </sc-for>
+      </div>
+
+      <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5 12 4l10 4.5-10 4.5z"></path><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"></path></svg>
+        Education
+      </h3>
+      <div style="padding-left: 20px; border-left: 2px solid color-mix(in srgb, var(--accent), transparent 80%); position: relative;">
+        <span style="position: absolute; width: 14px; height: 14px; border-radius: 50%; left: -8px; top: 0; background: var(--accent);"></span>
+        <h4 style="font-size: 18px; font-weight: 600; margin-bottom: 6px;"><span class="ph">[Degree]</span></h4>
+        <h5 style="font-size: 15px; color: var(--accent); margin-bottom: 6px; font-weight: 500;"><span class="ph">[20XX]</span> — <span class="ph">[20XX]</span></h5>
+        <p style="font-size: 14px; color: rgba(255,255,255,.65);"><span class="ph">[Institution, City]</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <div id="portfolio" class="section">
+    <div class="container section-title">
+      <h2>Portfolio</h2>
+      <p>Selected work. <span class="ph">[Drafted examples — replace with your own.]</span></p>
+    </div>
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 24px;">
+        <span style="min-height: 44px; display: inline-flex; align-items: center; padding: 10px 16px; font-size: 15px; font-weight: 600; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--accent), transparent 80%); border-left: 3px solid var(--accent); color: var(--accent); background: color-mix(in srgb, var(--accent), transparent 90%);">All</span>
+        <span style="min-height: 44px; display: inline-flex; align-items: center; padding: 10px 16px; font-size: 15px; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--accent), transparent 80%); border-left: 3px solid transparent; color: #ffffff;">APIs</span>
+        <span style="min-height: 44px; display: inline-flex; align-items: center; padding: 10px 16px; font-size: 15px; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--accent), transparent 80%); border-left: 3px solid transparent; color: #ffffff;">Web Apps</span>
+        <span style="min-height: 44px; display: inline-flex; align-items: center; padding: 10px 16px; font-size: 15px; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--accent), transparent 80%); border-left: 3px solid transparent; color: #ffffff;">E-commerce</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <sc-for list="{{projects}}" as="p" hint-placeholder-count="3">
+          <a href="#portfolio" style="position: relative; overflow: hidden; border-radius: 12px; display: block; height: 280px; background: #2c2c2c; border: 1px solid rgba(255,255,255,.08);">
+            <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+              <span class="ph" style="font-size: 13px;">[Project screenshot]</span>
+            </div>
+            <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px; background: linear-gradient(to top, rgba(0,0,0,.85) 0%, rgba(0,0,0,.45) 60%, rgba(0,0,0,0) 100%);">
+              <span style="display: inline-block; color: var(--accent); font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">{{p.category}}</span>
+              <h4 style="font-size: 18px; line-height: 1.35;">{{p.title}}</h4>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div id="services" class="section">
+    <div class="container section-title">
+      <h2>Services</h2>
+      <p>What I can take off your plate.</p>
+    </div>
+    <div class="container">
+      <h2 style="font-size: 30px; font-weight: 700; line-height: 1.25; margin-bottom: 16px;">
+        <span style="display: block;">Backend work, end to end</span>
+        <span style="display: block; color: var(--accent);">from schema to deploy</span>
+      </h2>
+      <p style="margin-bottom: 20px; color: rgba(255,255,255,.85); line-height: 1.7; font-size: 16px;">
+        <span class="ph">[A short paragraph on how you like to work — scope, communication, handover.]</span>
+      </p>
+      <a href="#contact" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 12px 26px; background: var(--accent); color: #310606; border-radius: 4px; font-weight: 500; margin-bottom: 32px;">
+        Start a Project
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+      </a>
+
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <sc-for list="{{services}}" as="s" hint-placeholder-count="3">
+          <div style="padding: 28px; border: 2px solid color-mix(in srgb, var(--accent), transparent 90%);">
+            <div style="margin-bottom: 18px; width: 56px; height: 56px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--accent), transparent 90%);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="{{accent}}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 8-5 4 5 4"></path><path d="m15 8 5 4-5 4"></path></svg>
+            </div>
+            <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">{{s.title}}</h3>
+            <p style="color: rgba(255,255,255,.8); line-height: 1.7; font-size: 15px;">{{s.body}}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section light-background">
+    <div class="container section-title">
+      <h2>Testimonials</h2>
+      <p><span class="ph">[Ask two people you've worked with for a couple of lines each.]</span></p>
+    </div>
+    <div class="container" style="display: flex; flex-direction: column; gap: 16px;">
+      <div style="background: #323232; border-radius: 15px; padding: 26px;">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="color-mix(in srgb, var(--accent), transparent 60%)" style="margin-bottom: 14px;"><path d="M9 7H5a3 3 0 0 0-3 3v7h7v-7H6c0-1.7 1.3-3 3-3V7Zm10 0h-4a3 3 0 0 0-3 3v7h7v-7h-3c0-1.7 1.3-3 3-3V7Z"></path></svg>
+        <p style="color: rgba(255,255,255,.88); line-height: 1.8; font-size: 16px; margin-bottom: 20px;"><span class="ph">[Quote from someone you've worked with.]</span></p>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: #2c2c2c; border: 2px solid color-mix(in srgb, var(--accent), transparent 70%); display: flex; align-items: center; justify-content: center; flex: none;">
+            <span class="ph" style="font-size: 10px;">[Pic]</span>
+          </div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 600;"><span class="ph">[Name]</span></h4>
+            <p style="font-size: 14px; color: var(--accent);"><span class="ph">[Role, Company]</span></p>
+          </div>
+        </div>
+      </div>
+      <div style="background: #323232; border-radius: 15px; padding: 26px;">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="color-mix(in srgb, var(--accent), transparent 60%)" style="margin-bottom: 14px;"><path d="M9 7H5a3 3 0 0 0-3 3v7h7v-7H6c0-1.7 1.3-3 3-3V7Zm10 0h-4a3 3 0 0 0-3 3v7h7v-7h-3c0-1.7 1.3-3 3-3V7Z"></path></svg>
+        <p style="color: rgba(255,255,255,.88); line-height: 1.8; font-size: 16px; margin-bottom: 20px;"><span class="ph">[Second quote — a client or teammate works well here.]</span></p>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="width: 48px; height: 48px; border-radius: 50%; background: #2c2c2c; border: 2px solid color-mix(in srgb, var(--accent), transparent 70%); display: flex; align-items: center; justify-content: center; flex: none;">
+            <span class="ph" style="font-size: 10px;">[Pic]</span>
+          </div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 600;"><span class="ph">[Name]</span></h4>
+            <p style="font-size: 14px; color: var(--accent);"><span class="ph">[Role, Company]</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" class="section">
+    <div class="container section-title">
+      <h2>Contact</h2>
+      <p>Tell me what you're building.</p>
+    </div>
+    <div class="container" style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="background: var(--accent); color: #310606; padding: 28px; border-radius: 16px;">
+        <h3 style="color: #310606; font-size: 24px; margin-bottom: 12px;">Contact Info</h3>
+        <p style="opacity: .8; margin-bottom: 24px; line-height: 1.7; font-size: 15px;">The fastest way to reach me is email. I'm also on LinkedIn most days.</p>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="display: flex; gap: 16px;">
+            <div style="width: 48px; height: 48px; background: rgba(49,6,6,.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex: none;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#310606" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.6"></circle></svg>
+            </div>
+            <div>
+              <h4 style="color: #310606; font-size: 17px; margin-bottom: 4px; font-weight: 700;">Location</h4>
+              <p style="font-size: 15px;"><span class="ph-dark">[City, Country]</span></p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 16px;">
+            <div style="width: 48px; height: 48px; background: rgba(49,6,6,.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex: none;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#310606" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h3l2 5-2.2 1.3a13 13 0 0 0 5.9 5.9L16 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4 5.2 2 2 0 0 1 6 3Z"></path></svg>
+            </div>
+            <div>
+              <h4 style="color: #310606; font-size: 17px; margin-bottom: 4px; font-weight: 700;">Phone</h4>
+              <p style="font-size: 15px;"><span class="ph-dark">[+91 00000 00000]</span></p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 16px;">
+            <div style="width: 48px; height: 48px; background: rgba(49,6,6,.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex: none;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#310606" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3.5 7 8.5 6 8.5-6"></path></svg>
+            </div>
+            <div>
+              <h4 style="color: #310606; font-size: 17px; margin-bottom: 4px; font-weight: 700;">Email</h4>
+              <p style="font-size: 15px;"><span class="ph-dark">[you@email.com]</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: #232323; padding: 28px; border-radius: 16px;">
+        <h3 style="font-size: 24px; margin-bottom: 12px;">Get In Touch</h3>
+        <p style="color: rgba(255,255,255,.8); margin-bottom: 22px; line-height: 1.7; font-size: 15px;">Drop a line about the role or project and I'll get back to you.</p>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <input type="text" placeholder="Your Name" style="background: #1f1f1f; border: 1px solid rgba(255,255,255,.14); color: #ffffff; border-radius: 8px; padding: 14px 16px; font-size: 16px; font-family: 'Roboto', sans-serif; width: 100%; min-height: 50px;">
+          <input type="text" placeholder="Your Email" style="background: #1f1f1f; border: 1px solid rgba(255,255,255,.14); color: #ffffff; border-radius: 8px; padding: 14px 16px; font-size: 16px; font-family: 'Roboto', sans-serif; width: 100%; min-height: 50px;">
+          <input type="text" placeholder="Subject" style="background: #1f1f1f; border: 1px solid rgba(255,255,255,.14); color: #ffffff; border-radius: 8px; padding: 14px 16px; font-size: 16px; font-family: 'Roboto', sans-serif; width: 100%; min-height: 50px;">
+          <textarea rows="5" placeholder="Message" style="background: #1f1f1f; border: 1px solid rgba(255,255,255,.14); color: #ffffff; border-radius: 8px; padding: 14px 16px; font-size: 16px; font-family: 'Roboto', sans-serif; width: 100%; resize: vertical;"></textarea>
+          <a href="#contact" class="btn btn-primary">Send Message</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background: #1b1b1b; padding: 32px 0 28px;">
+    <div class="container" style="text-align: center;">
+      <p style="color: rgba(255,255,255,.8); margin-bottom: 8px; font-size: 15px;">© <span>Copyright</span> <strong style="padding: 0 4px;">Sudhanshu <span class="ph">[Surname]</span></strong></p>
+      <p style="color: rgba(255,255,255,.55); font-size: 14px;">Design based on the <a href="#hero">SnapFolio</a> template by BootstrapMade</p>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#ececec","options":["#ececec","#38d39f","#4a9cff","#ffb648"],"section":"Theme"},"phColor":{"editor":"color","default":"#d6a15c","section":"Theme"},"$preview":{"width":390,"height":7600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#ececec',
+      phColor: this.props.phColor ?? '#d6a15c',
+      backend: [
+        { name: 'PHP 8', pct: '90%' },
+        { name: 'Laravel', pct: '85%' },
+        { name: 'MySQL', pct: '80%' },
+        { name: 'REST API Design', pct: '82%' }
+      ],
+      tooling: [
+        { name: 'JavaScript', pct: '72%' },
+        { name: 'Vue.js', pct: '65%' },
+        { name: 'Docker', pct: '68%' },
+        { name: 'Git & CI', pct: '78%' }
+      ],
+      jobs: [
+        { dates: '[20XX] — Present' },
+        { dates: '[20XX] — [20XX]' },
+        { dates: '[20XX] — [20XX]' }
+      ],
+      projects: [
+        { category: 'APIs', title: '[Project Name] — Payments API' },
+        { category: 'Web Apps', title: '[Project Name] — Multi-tenant CRM' },
+        { category: 'E-commerce', title: '[Project Name] — Inventory Sync' }
+      ],
+      services: [
+        { title: 'API development', body: 'REST APIs in Laravel with versioning, auth, rate limiting and documentation your front-end team can work from.' },
+        { title: 'Database design', body: 'Schemas that hold up as the product grows — sane relationships, the right indexes, safe migrations.' },
+        { title: 'Performance tuning', body: 'Profiling slow endpoints, fixing N+1 queries, adding caching and queues where they earn their keep.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
