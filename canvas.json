@@ -1,0 +1,13 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Home — desktop", "x": 0, "y": 0, "w": 1440, "h": 5200 },
+    { "file": "CaseStudy.dc.html", "title": "Project detail — desktop", "x": 1600, "y": 0, "w": 1440, "h": 3600 },
+    { "file": "Mobile.dc.html", "title": "Home — mobile", "x": 3200, "y": 0, "w": 390, "h": 3400 }
+  ],
+  "annotations": [
+    { "id": "how-to-read", "x": -420, "y": 0, "w": 340, "text": "Sudhanshu — portfolio prototype\n\nLight editorial direction: warm paper, deep ink, one clay accent.\n\nType: Instrument Serif (display) + Schibsted Grotesk (body) + JetBrains Mono (labels)." },
+    { "id": "placeholders", "x": -420, "y": 300, "w": 340, "text": "Anything in [square brackets] with a dotted underline is a placeholder waiting on your real LinkedIn details — name, companies, dates, city, email, metrics.\n\nThe project write-ups are drafted examples for a PHP/Laravel backend role. Swap in your actual projects." },
+    { "id": "accent-note", "x": -420, "y": 640, "w": 340, "text": "Each artboard has an accent colour control above it — four presets (clay, forest, indigo, bronze) or pick your own." }
+  ],
+  "launch": { "view": "canvas" }
+}

@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; background: #FBF9F5; color: #16130F; font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    * { box-sizing: border-box; }
+    a { color: #16130F; text-decoration: none; transition: color .18s ease; }
+    a:hover { color: var(--accent, #C0502C); }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace; }
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; font-weight: 400; }
+    .eyebrow { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #8A8177; }
+    .ph { color: #A2723F; border-bottom: 1px dotted #C9AF8C; }
+    .work-row { transition: background .2s ease; }
+    .work-row:hover { background: #F4F0E9; }
+    .work-row:hover .arrow { transform: translateX(8px); }
+    .arrow { transition: transform .22s cubic-bezier(.2,.8,.2,1); display: inline-block; }
+    .thumb { background: #EFE9E0; border: 1px solid #E2DCD2; }
+  </style>
+</helmet>
+
+<div style="--accent: {{accent}}; --accent-deep: {{accentDeep}}; background: #FBF9F5;">
+
+  <!-- NAV -->
+  <div style="position: sticky; top: 0; z-index: 20; background: rgba(251,249,245,.88); backdrop-filter: blur(12px); border-bottom: 1px solid #E8E2D8;">
+    <div style="max-width: 1216px; margin: 0 auto; padding: 0 112px; height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+      <a href="#top" class="serif" style="font-size: 26px; letter-spacing: -.01em;">Sudhanshu<span style="color: var(--accent);">.</span></a>
+      <div style="display: flex; align-items: center; gap: 36px;">
+        <a href="#work" style="font-size: 14px; font-weight: 500;">Work</a>
+        <a href="#about" style="font-size: 14px; font-weight: 500;">About</a>
+        <a href="#experience" style="font-size: 14px; font-weight: 500;">Experience</a>
+        <a href="#contact" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 20px; border: 1px solid #16130F; border-radius: 999px; font-size: 14px; font-weight: 500;">
+          Get in touch
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div id="top" style="max-width: 1216px; margin: 0 auto; padding: 120px 112px 96px;">
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 64px; align-items: end;">
+      <div style="display: flex; flex-direction: column; gap: 32px;">
+        <div class="eyebrow">Sudhanshu <span class="ph">[Last Name]</span> — Backend Engineer</div>
+        <h1 class="serif" style="margin: 0; font-size: 104px; line-height: .96; letter-spacing: -.025em; max-width: 14ch; text-wrap: balance;">
+          The quiet machinery behind reliable web products.
+        </h1>
+        <p style="margin: 0; max-width: 58ch; font-size: 19px; line-height: 1.68; color: #4A443C;">
+          I design and ship PHP and Laravel systems — APIs, payment flows and data pipelines
+          that stay predictable when traffic doesn't. <span class="ph">[X]</span> years of it,
+          mostly for teams who need the backend to just work.
+        </p>
+        <div style="display: flex; align-items: center; gap: 14px; padding-top: 8px;">
+          <a href="#work" style="display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 28px; background: var(--accent); color: #FBF9F5; border-radius: 999px; font-size: 15px; font-weight: 600;">
+            View selected work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </a>
+          <a href="#contact" style="display: inline-flex; align-items: center; gap: 10px; height: 54px; padding: 0 26px; border: 1px solid #D6CFC3; border-radius: 999px; font-size: 15px; font-weight: 500;">
+            Download résumé
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"></path><path d="m7 11 5 5 5-5"></path><path d="M5 20h14"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 26px; border-left: 1px solid #E2DCD2; padding-left: 28px; padding-bottom: 12px;">
+        <div style="display: flex; flex-direction: column; gap: 7px;">
+          <div class="eyebrow">Currently</div>
+          <div style="font-size: 15px; line-height: 1.5;"><span class="ph">[Role]</span> at <span class="ph">[Company]</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 7px;">
+          <div class="eyebrow">Based in</div>
+          <div style="font-size: 15px;"><span class="ph">[City, India]</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 7px;">
+          <div class="eyebrow">Status</div>
+          <div style="display: flex; align-items: center; gap: 9px; font-size: 15px;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none;"></span>
+            Open to <span class="ph">[new roles]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECH STRIP -->
+  <div style="border-top: 1px solid #E8E2D8; border-bottom: 1px solid #E8E2D8; background: #F6F2EB;">
+    <div style="max-width: 1216px; margin: 0 auto; padding: 22px 112px; display: flex; flex-wrap: wrap; align-items: center; gap: 28px;">
+      <span class="eyebrow" style="color: #16130F;">Toolkit</span>
+      <span style="width: 1px; height: 14px; background: #D6CFC3;"></span>
+      <span class="mono" style="font-size: 13px; color: #6B645C;">PHP&nbsp;8</span>
+      <span class="mono" style="font-size: 13px; color: #6B645C;">Laravel</span>
+      <span class="mono" style="font-size: 13px; color: #6B645C;">MySQL</span>
+      <span class="mono" style="font-size: 13px; color: #6B645C;">REST&nbsp;APIs</span>
+      <span class="mono" style="font-size: 13px; color: #6B645C;">Redis</span>
+      <span class="mono" style="font-size: 13px; color: #6B645C;">Docker</span>
+      <span class="mono" style="font-size: 13px; color: #6B645C;">AWS</span>
+      <span class="mono" style="font-size: 13px; color: #6B645C;">Vue.js</span>
+      <span class="mono" style="font-size: 13px; color: #6B645C;">Git</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" style="max-width: 1216px; margin: 0 auto; padding: 128px 112px;">
+    <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr) 300px; gap: 56px;">
+      <div class="eyebrow" style="padding-top: 10px;">01 — About</div>
+      <div style="display: flex; flex-direction: column; gap: 28px;">
+        <p class="serif" style="margin: 0; font-size: 34px; line-height: 1.32; letter-spacing: -.01em; max-width: 26ch;">
+          I care about the unglamorous parts: schema design, queue behaviour, and the error you only see at 2&nbsp;a.m.
+        </p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4A443C; max-width: 60ch;">
+          <span class="ph">[Write 2–3 sentences here: how you started, what kind of products you work on, and what you're best at. Keep your own voice — this is the part people actually read.]</span>
+        </p>
+        <p style="margin: 0; font-size: 17px; line-height: 1.75; color: #4A443C; max-width: 60ch;">
+          Outside of shipping features, I spend time on <span class="ph">[code review / mentoring / open source / performance work]</span> —
+          and I'm happiest on a team that treats the database as a design problem, not an afterthought.
+        </p>
+      </div>
+      <div class="thumb" style="height: 380px; display: flex; align-items: center; justify-content: center;">
+        <span class="eyebrow" style="text-align: center; line-height: 1.8;">[Your<br>photo]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SELECTED WORK -->
+  <div id="work" style="border-top: 1px solid #E8E2D8;">
+    <div style="max-width: 1216px; margin: 0 auto; padding: 112px 112px 40px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 32px;">
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div class="eyebrow">02 — Selected work</div>
+          <h2 class="serif" style="margin: 0; font-size: 62px; line-height: 1.02; letter-spacing: -.02em;">Things I've built.</h2>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #6B645C; max-width: 34ch;">
+          Three projects that show how I think about data, reliability and the boring details that keep a system honest.
+        </p>
+      </div>
+    </div>
+
+    <div style="max-width: 1216px; margin: 0 auto; padding: 0 112px 112px;">
+      <div style="display: flex; flex-direction: column;">
+
+        <a href="#top" class="work-row" style="display: grid; grid-template-columns: 76px minmax(0, 1fr) 380px; gap: 40px; align-items: center; padding: 40px 24px; border-top: 1px solid #E2DCD2; margin: 0 -24px;">
+          <div class="serif" style="font-size: 40px; color: var(--accent); line-height: 1;">01</div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <h3 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -.015em;"><span class="ph">[Project Name]</span> — Subscriptions &amp; payments platform</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #4A443C; max-width: 52ch;">
+              Billing engine handling recurring plans, proration and failed-payment retries, with an idempotent webhook layer so a duplicated event never double-charges anyone.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px;">
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">Laravel</span>
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">MySQL</span>
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">Queues</span>
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">Stripe</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--accent); padding-top: 6px;">
+              Read the case study
+              <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+            </div>
+          </div>
+          <div class="thumb" style="height: 230px; display: flex; align-items: center; justify-content: center;">
+            <span class="eyebrow">[Screenshot]</span>
+          </div>
+        </a>
+
+        <a href="#top" class="work-row" style="display: grid; grid-template-columns: 76px minmax(0, 1fr) 380px; gap: 40px; align-items: center; padding: 40px 24px; border-top: 1px solid #E2DCD2; margin: 0 -24px;">
+          <div class="serif" style="font-size: 40px; color: var(--accent); line-height: 1;">02</div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <h3 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -.015em;"><span class="ph">[Project Name]</span> — Multi-tenant CRM</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #4A443C; max-width: 52ch;">
+              One codebase serving <span class="ph">[N]</span> client workspaces with isolated data, role-based permissions and a reporting layer that reads from cached aggregates instead of hammering the primary.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px;">
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">Laravel</span>
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">Vue.js</span>
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">Redis</span>
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">Docker</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--accent); padding-top: 6px;">
+              Read the case study
+              <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+            </div>
+          </div>
+          <div class="thumb" style="height: 230px; display: flex; align-items: center; justify-content: center;">
+            <span class="eyebrow">[Screenshot]</span>
+          </div>
+        </a>
+
+        <a href="#top" class="work-row" style="display: grid; grid-template-columns: 76px minmax(0, 1fr) 380px; gap: 40px; align-items: center; padding: 40px 24px; border-top: 1px solid #E2DCD2; border-bottom: 1px solid #E2DCD2; margin: 0 -24px;">
+          <div class="serif" style="font-size: 40px; color: var(--accent); line-height: 1;">03</div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <h3 style="margin: 0; font-size: 28px; font-weight: 600; letter-spacing: -.015em;"><span class="ph">[Project Name]</span> — Inventory sync API</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #4A443C; max-width: 52ch;">
+              A REST API reconciling stock across <span class="ph">[N]</span> warehouses and storefronts, with conflict resolution, replayable jobs and an audit trail for every write.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px;">
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">PHP 8</span>
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">REST</span>
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">PostgreSQL</span>
+              <span class="mono" style="font-size: 12px; color: #6B645C; border: 1px solid #E2DCD2; border-radius: 999px; padding: 6px 12px;">AWS</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--accent); padding-top: 6px;">
+              Read the case study
+              <span class="arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></span>
+            </div>
+          </div>
+          <div class="thumb" style="height: 230px; display: flex; align-items: center; justify-content: center;">
+            <span class="eyebrow">[Screenshot]</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CAPABILITIES -->
+  <div style="background: #F6F2EB; border-top: 1px solid #E8E2D8; border-bottom: 1px solid #E8E2D8;">
+    <div style="max-width: 1216px; margin: 0 auto; padding: 104px 112px;">
+      <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px;">
+        <div class="eyebrow" style="padding-top: 10px;">03 — Capabilities</div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px;">
+
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <h3 class="serif" style="margin: 0; font-size: 26px; letter-spacing: -.01em;">Languages &amp; frameworks</h3>
+            <div style="height: 1px; background: #DDD5C9;"></div>
+            <div style="display: flex; flex-direction: column; gap: 11px; font-size: 15px; color: #4A443C;">
+              <span>PHP 8 · OOP &amp; SOLID</span>
+              <span>Laravel · Eloquent, Livewire</span>
+              <span>CodeIgniter</span>
+              <span>JavaScript · Vue.js, jQuery</span>
+              <span>Blade, Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <h3 class="serif" style="margin: 0; font-size: 26px; letter-spacing: -.01em;">Data &amp; infrastructure</h3>
+            <div style="height: 1px; background: #DDD5C9;"></div>
+            <div style="display: flex; flex-direction: column; gap: 11px; font-size: 15px; color: #4A443C;">
+              <span>MySQL · schema &amp; query tuning</span>
+              <span>PostgreSQL</span>
+              <span>Redis · cache &amp; queues</span>
+              <span>Docker, Nginx</span>
+              <span>AWS · EC2, S3, RDS</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <h3 class="serif" style="margin: 0; font-size: 26px; letter-spacing: -.01em;">How I work</h3>
+            <div style="height: 1px; background: #DDD5C9;"></div>
+            <div style="display: flex; flex-direction: column; gap: 11px; font-size: 15px; color: #4A443C;">
+              <span>REST API design &amp; versioning</span>
+              <span>Background jobs &amp; retries</span>
+              <span>Automated tests, PHPUnit</span>
+              <span>Git flow, code review</span>
+              <span>Profiling &amp; performance work</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div id="experience" style="max-width: 1216px; margin: 0 auto; padding: 112px 112px;">
+    <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px;">
+      <div class="eyebrow" style="padding-top: 10px;">04 — Experience</div>
+      <div style="display: flex; flex-direction: column;">
+
+        <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 40px; padding: 34px 0; border-top: 1px solid #E2DCD2;">
+          <div class="mono" style="font-size: 13px; color: #8A8177; padding-top: 6px;"><span class="ph">[20XX]</span> — Present</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -.01em;"><span class="ph">[Job Title]</span></h3>
+            <div style="font-size: 15px; color: var(--accent); font-weight: 500;"><span class="ph">[Company Name]</span> · <span class="ph">[City]</span></div>
+            <p style="margin: 4px 0 0; font-size: 16px; line-height: 1.7; color: #4A443C; max-width: 62ch;">
+              <span class="ph">[One or two lines: what you own, the scale you work at, and one outcome you're proud of.]</span>
+            </p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 40px; padding: 34px 0; border-top: 1px solid #E2DCD2;">
+          <div class="mono" style="font-size: 13px; color: #8A8177; padding-top: 6px;"><span class="ph">[20XX]</span> — <span class="ph">[20XX]</span></div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -.01em;"><span class="ph">[Job Title]</span></h3>
+            <div style="font-size: 15px; color: var(--accent); font-weight: 500;"><span class="ph">[Company Name]</span> · <span class="ph">[City]</span></div>
+            <p style="margin: 4px 0 0; font-size: 16px; line-height: 1.7; color: #4A443C; max-width: 62ch;">
+              <span class="ph">[What you built there, and what it changed.]</span>
+            </p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 40px; padding: 34px 0; border-top: 1px solid #E2DCD2; border-bottom: 1px solid #E2DCD2;">
+          <div class="mono" style="font-size: 13px; color: #8A8177; padding-top: 6px;"><span class="ph">[20XX]</span> — <span class="ph">[20XX]</span></div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -.01em;"><span class="ph">[Job Title]</span></h3>
+            <div style="font-size: 15px; color: var(--accent); font-weight: 500;"><span class="ph">[Company Name]</span> · <span class="ph">[City]</span></div>
+            <p style="margin: 4px 0 0; font-size: 16px; line-height: 1.7; color: #4A443C; max-width: 62ch;">
+              <span class="ph">[Where you started, and the foundation it gave you.]</span>
+            </p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 40px; padding-top: 34px;">
+          <div class="eyebrow" style="padding-top: 6px;">Education</div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-size: 17px; font-weight: 600;"><span class="ph">[Degree, e.g. B.Tech Computer Science]</span></div>
+            <div style="font-size: 15px; color: #6B645C;"><span class="ph">[Institution]</span> · <span class="ph">[Year]</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" style="background: #16130F; color: #FBF9F5;">
+    <div style="max-width: 1216px; margin: 0 auto; padding: 120px 112px 56px;">
+      <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px;">
+        <div class="eyebrow" style="color: #8A8177; padding-top: 16px;">05 — Contact</div>
+        <div style="display: flex; flex-direction: column; gap: 40px;">
+          <h2 class="serif" style="margin: 0; font-size: 76px; line-height: 1.02; letter-spacing: -.025em; max-width: 16ch;">
+            Let's build something durable.
+          </h2>
+          <p style="margin: 0; font-size: 18px; line-height: 1.7; color: #B5ADA2; max-width: 50ch;">
+            Available for <span style="color: #FBF9F5;" class="ph">[full-time roles / freelance projects]</span>.
+            The fastest way to reach me is email — I reply within a day.
+          </p>
+          <a href="#contact" class="serif" style="color: #FBF9F5; font-size: 44px; letter-spacing: -.02em; border-bottom: 1px solid #4A443C; padding-bottom: 12px; width: fit-content;">
+            <span class="ph" style="color: #E8B88A; border-bottom: none;">[you@email.com]</span>
+          </a>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px;">
+            <a href="#contact" style="color: #FBF9F5; display: inline-flex; align-items: center; gap: 9px; height: 46px; padding: 0 20px; border: 1px solid #3A352E; border-radius: 999px; font-size: 14px; font-weight: 500;">
+              LinkedIn
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+            </a>
+            <a href="#contact" style="color: #FBF9F5; display: inline-flex; align-items: center; gap: 9px; height: 46px; padding: 0 20px; border: 1px solid #3A352E; border-radius: 999px; font-size: 14px; font-weight: 500;">
+              GitHub
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+            </a>
+            <a href="#contact" style="color: #FBF9F5; display: inline-flex; align-items: center; gap: 9px; height: 46px; padding: 0 20px; border: 1px solid #3A352E; border-radius: 999px; font-size: 14px; font-weight: 500;">
+              Résumé (PDF)
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"></path><path d="m7 11 5 5 5-5"></path><path d="M5 20h14"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="max-width: 1216px; margin: 0 auto; padding: 0 112px 44px;">
+      <div style="border-top: 1px solid #2B2721; padding-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+        <span class="mono" style="font-size: 12px; color: #6B645C;">© 2026 Sudhanshu <span class="ph" style="color: #8A8177;">[Last Name]</span></span>
+        <span class="mono" style="font-size: 12px; color: #6B645C;">Built in <span class="ph" style="color: #8A8177;">[City]</span></span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#C0502C","options":["#C0502C","#1F5C4A","#2D4A7C","#8A5A2B"],"section":"Theme"},"accentDeep":{"editor":"color","default":"#8F3A1E","section":"Theme"},"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#C0502C',
+      accentDeep: this.props.accentDeep ?? '#8F3A1E'
+    };
+  }
+}
+</script>
+</body>
+</html>

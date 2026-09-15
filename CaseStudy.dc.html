@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; background: #FBF9F5; color: #16130F; font-family: 'Schibsted Grotesk', 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    * { box-sizing: border-box; }
+    a { color: #16130F; text-decoration: none; transition: color .18s ease; }
+    a:hover { color: var(--accent, #C0502C); }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace; }
+    .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; font-weight: 400; }
+    .eyebrow { font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #8A8177; }
+    .ph { color: #A2723F; border-bottom: 1px dotted #C9AF8C; }
+    .thumb { background: #EFE9E0; border: 1px solid #E2DCD2; }
+    .body-copy { font-size: 17px; line-height: 1.78; color: #4A443C; }
+    .node { background: #FBF9F5; border: 1px solid #DDD5C9; border-radius: 6px; padding: 16px 18px; display: flex; flex-direction: column; gap: 5px; }
+  </style>
+</helmet>
+
+<div style="--accent: {{accent}}; background: #FBF9F5;">
+
+  <!-- NAV -->
+  <div style="position: sticky; top: 0; z-index: 20; background: rgba(251,249,245,.9); backdrop-filter: blur(12px); border-bottom: 1px solid #E8E2D8;">
+    <div style="max-width: 1216px; margin: 0 auto; padding: 0 112px; height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+      <a href="#top" style="display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="m11 18-6-6 6-6"></path></svg>
+        All work
+      </a>
+      <a href="#top" class="serif" style="font-size: 26px; letter-spacing: -.01em;">Sudhanshu<span style="color: var(--accent);">.</span></a>
+    </div>
+  </div>
+
+  <!-- TITLE BLOCK -->
+  <div id="top" style="max-width: 1216px; margin: 0 auto; padding: 104px 112px 64px;">
+    <div style="display: flex; flex-direction: column; gap: 30px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <span class="serif" style="font-size: 26px; color: var(--accent);">01</span>
+        <span style="width: 28px; height: 1px; background: #D6CFC3;"></span>
+        <span class="eyebrow">Case study</span>
+      </div>
+      <h1 class="serif" style="margin: 0; font-size: 88px; line-height: .98; letter-spacing: -.025em; max-width: 15ch; text-wrap: balance;">
+        <span class="ph" style="border-bottom-width: 2px;">[Project Name]</span> — a billing engine that never double-charges.
+      </h1>
+      <p style="margin: 0; max-width: 62ch; font-size: 20px; line-height: 1.65; color: #4A443C;">
+        Recurring subscriptions, proration and retries for <span class="ph">[Client / Company]</span> —
+        rebuilt so that every payment event is idempotent, auditable and safe to replay.
+      </p>
+    </div>
+  </div>
+
+  <!-- META BAR -->
+  <div style="border-top: 1px solid #E8E2D8; border-bottom: 1px solid #E8E2D8; background: #F6F2EB;">
+    <div style="max-width: 1216px; margin: 0 auto; padding: 32px 112px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        <div class="eyebrow">Role</div>
+        <div style="font-size: 15px; line-height: 1.5;"><span class="ph">[Backend Engineer]</span></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        <div class="eyebrow">Timeline</div>
+        <div style="font-size: 15px; line-height: 1.5;"><span class="ph">[Month 20XX — Month 20XX]</span></div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        <div class="eyebrow">Stack</div>
+        <div style="font-size: 15px; line-height: 1.5;">Laravel · MySQL · Redis · Stripe</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        <div class="eyebrow">Team</div>
+        <div style="font-size: 15px; line-height: 1.5;"><span class="ph">[e.g. 4 engineers, 1 designer]</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div style="max-width: 1216px; margin: 0 auto; padding: 64px 112px 0;">
+    <div class="thumb" style="height: 520px; display: flex; align-items: center; justify-content: center;">
+      <span class="eyebrow">[Hero screenshot — dashboard, API docs or architecture shot]</span>
+    </div>
+  </div>
+
+  <!-- NARRATIVE -->
+  <div style="max-width: 1216px; margin: 0 auto; padding: 96px 112px 0;">
+    <div style="display: flex; flex-direction: column; gap: 76px;">
+
+      <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px;">
+        <div class="eyebrow" style="padding-top: 12px;">The problem</div>
+        <div style="display: flex; flex-direction: column; gap: 22px; max-width: 64ch;">
+          <p class="serif" style="margin: 0; font-size: 30px; line-height: 1.36; letter-spacing: -.01em; color: #16130F;">
+            Retried webhooks were charging some customers twice, and nobody could prove what had happened after the fact.
+          </p>
+          <p class="body-copy" style="margin: 0;">
+            <span class="ph">[Describe the situation you inherited: the legacy system, the failure mode, the business cost. Two or three sentences is plenty — reviewers skim.]</span>
+          </p>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px;">
+        <div class="eyebrow" style="padding-top: 12px;">What I built</div>
+        <div style="display: flex; flex-direction: column; gap: 22px; max-width: 64ch;">
+          <p class="body-copy" style="margin: 0;">
+            Every inbound event now passes through a dedupe gate keyed on the provider's event ID, so a replayed webhook resolves to the same ledger row instead of a new charge. State transitions are explicit and append-only — a subscription can be reconstructed from its event log alone.
+          </p>
+          <p class="body-copy" style="margin: 0;">
+            <span class="ph">[Add your own second paragraph: the decision you'd defend in an interview, and the trade-off you accepted to get there.]</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- ARCHITECTURE -->
+      <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px;">
+        <div class="eyebrow" style="padding-top: 12px;">Architecture</div>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="background: #F6F2EB; border: 1px solid #E2DCD2; border-radius: 10px; padding: 40px;">
+            <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: stretch;">
+              <div class="node">
+                <span class="eyebrow" style="color: var(--accent);">Ingress</span>
+                <span style="font-size: 15px; font-weight: 600;">Webhook endpoint</span>
+                <span style="font-size: 13px; color: #6B645C; line-height: 1.5;">Signature check, 200 immediately</span>
+              </div>
+              <div class="node">
+                <span class="eyebrow" style="color: var(--accent);">Gate</span>
+                <span style="font-size: 15px; font-weight: 600;">Idempotency store</span>
+                <span style="font-size: 13px; color: #6B645C; line-height: 1.5;">Redis key per event ID</span>
+              </div>
+              <div class="node">
+                <span class="eyebrow" style="color: var(--accent);">Worker</span>
+                <span style="font-size: 15px; font-weight: 600;">Queued job</span>
+                <span style="font-size: 13px; color: #6B645C; line-height: 1.5;">Backoff, dead-letter queue</span>
+              </div>
+              <div class="node">
+                <span class="eyebrow" style="color: var(--accent);">Truth</span>
+                <span style="font-size: 15px; font-weight: 600;">Append-only ledger</span>
+                <span style="font-size: 13px; color: #6B645C; line-height: 1.5;">MySQL, one row per transition</span>
+              </div>
+            </div>
+          </div>
+          <p style="margin: 0; font-size: 13px; color: #8A8177; line-height: 1.6;">
+            <span class="ph">[Replace with your real flow — or drop in a proper diagram image here.]</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- OUTCOME -->
+      <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px;">
+        <div class="eyebrow" style="padding-top: 12px;">Outcome</div>
+        <div style="display: flex; flex-direction: column; gap: 32px;">
+          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;">
+            <div style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #16130F; padding-top: 20px;">
+              <span class="serif" style="font-size: 52px; line-height: 1; letter-spacing: -.02em;"><span class="ph" style="border-bottom: none;">[00]</span></span>
+              <span style="font-size: 14px; color: #6B645C; line-height: 1.55;">Duplicate charges since launch</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #16130F; padding-top: 20px;">
+              <span class="serif" style="font-size: 52px; line-height: 1; letter-spacing: -.02em;"><span class="ph" style="border-bottom: none;">[XX%]</span></span>
+              <span style="font-size: 14px; color: #6B645C; line-height: 1.55;">Drop in failed-payment support tickets</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #16130F; padding-top: 20px;">
+              <span class="serif" style="font-size: 52px; line-height: 1; letter-spacing: -.02em;"><span class="ph" style="border-bottom: none;">[XXms]</span></span>
+              <span style="font-size: 14px; color: #6B645C; line-height: 1.55;">Median webhook acknowledgement</span>
+            </div>
+          </div>
+          <p class="body-copy" style="margin: 0; max-width: 64ch;">
+            <span class="ph">[Only keep numbers you can actually stand behind. If you don't have metrics, replace this row with a short paragraph on what changed for the team — that reads better than invented percentages.]</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- GALLERY -->
+      <div style="display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 56px;">
+        <div class="eyebrow" style="padding-top: 12px;">Detail</div>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;">
+          <div class="thumb" style="height: 300px; display: flex; align-items: center; justify-content: center;">
+            <span class="eyebrow">[Screenshot]</span>
+          </div>
+          <div class="thumb" style="height: 300px; display: flex; align-items: center; justify-content: center;">
+            <span class="eyebrow">[Screenshot]</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NEXT -->
+  <div style="max-width: 1216px; margin: 96px auto 0; padding: 0 112px;">
+    <a href="#top" style="display: flex; align-items: center; justify-content: space-between; gap: 40px; border-top: 1px solid #E2DCD2; padding: 44px 0 96px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="eyebrow">Next project</span>
+        <span class="serif" style="font-size: 46px; letter-spacing: -.02em; line-height: 1.05;"><span class="ph">[Project Name]</span> — Multi-tenant CRM</span>
+      </div>
+      <span style="display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; border: 1px solid #16130F; border-radius: 50%; flex: none;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+      </span>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background: #16130F; color: #FBF9F5;">
+    <div style="max-width: 1216px; margin: 0 auto; padding: 56px 112px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <span class="serif" style="font-size: 26px;">Sudhanshu<span style="color: var(--accent);">.</span></span>
+      <a href="#top" style="color: #FBF9F5; font-size: 15px; font-weight: 500; display: inline-flex; align-items: center; gap: 9px;">
+        <span class="ph" style="color: #E8B88A; border-bottom: none;">[you@email.com]</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M9 7h8v8"></path></svg>
+      </a>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"accent":{"editor":"color","default":"#C0502C","options":["#C0502C","#1F5C4A","#2D4A7C","#8A5A2B"],"section":"Theme"},"$preview":{"width":1440,"height":3600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#C0502C' };
+  }
+}
+</script>
+</body>
+</html>
