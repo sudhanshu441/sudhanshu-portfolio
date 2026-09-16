@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>School CRM — Coming Soon</title>
+<meta name="description" content="School CRM — one place for admissions, attendance, fees, grades and parent communication. Launching soon.">
+<meta name="theme-color" content="#0b1020">
+<meta property="og:title" content="School CRM — Coming Soon">
+<meta property="og:description" content="One place for admissions, attendance, fees, grades and parent communication.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#127979;</text></svg>">
+<style>
+  :root{
+    --bg:#0b1020;
+    --bg-2:#111833;
+    --surface:rgba(255,255,255,.04);
+    --surface-2:rgba(255,255,255,.07);
+    --border:rgba(255,255,255,.10);
+    --border-strong:rgba(255,255,255,.18);
+    --text:#eef1f8;
+    --muted:#9aa4c2;
+    --accent:#5b8cff;
+    --accent-2:#35e0c0;
+    --contrast:#07102a;
+    --danger:#ff9a8a;
+    --radius:16px;
+    --maxw:1080px;
+    --font-head:'Plus Jakarta Sans',system-ui,'Segoe UI',sans-serif;
+    --font-body:'Inter',system-ui,'Segoe UI',sans-serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+
+  html{-webkit-text-size-adjust:100%}
+
+  body{
+    margin:0;
+    min-height:100vh;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  /* Ambient background: two soft blooms + a faint grid. */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+      radial-gradient(60rem 40rem at 12% -10%, rgba(91,140,255,.28), transparent 60%),
+      radial-gradient(48rem 34rem at 92% 8%, rgba(53,224,192,.18), transparent 62%),
+      linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 60%,var(--bg) 100%);
+  }
+  body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background-image:
+      linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(70% 60% at 50% 0%,#000 0%,transparent 75%);
+    -webkit-mask-image:radial-gradient(70% 60% at 50% 0%,#000 0%,transparent 75%);
+    pointer-events:none;
+  }
+
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+  a{color:inherit}
+
+  /* ---------- Header ---------- */
+  header{padding:28px 0 8px}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px;font-family:var(--font-head);font-weight:800;font-size:1.05rem;letter-spacing:-.01em}
+  .mark{
+    width:38px;height:38px;flex:0 0 38px;
+    display:grid;place-items:center;
+    border-radius:11px;
+    background:linear-gradient(140deg,var(--accent),var(--accent-2));
+    color:var(--contrast);
+  }
+  .mark svg{width:21px;height:21px;display:block}
+  .brand small{display:block;font-family:var(--font-body);font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+  .contact-link{
+    font-size:.88rem;color:var(--muted);text-decoration:none;
+    border:1px solid var(--border);border-radius:999px;padding:8px 16px;
+    transition:color .2s,border-color .2s,background .2s;
+  }
+  .contact-link:hover,.contact-link:focus-visible{color:var(--text);border-color:var(--border-strong);background:var(--surface)}
+
+  /* ---------- Hero ---------- */
+  main{padding:56px 0 24px}
+  .badge{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:7px 15px;border-radius:999px;
+    background:var(--surface);border:1px solid var(--border);
+    font-size:.79rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 0 0 rgba(53,224,192,.55);animation:pulse 2.4s ease-out infinite}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(53,224,192,.55)}
+    70%{box-shadow:0 0 0 9px rgba(53,224,192,0)}
+    100%{box-shadow:0 0 0 0 rgba(53,224,192,0)}
+  }
+
+  h1{
+    font-family:var(--font-head);
+    font-weight:800;
+    font-size:clamp(2.3rem,7vw,4.2rem);
+    line-height:1.05;
+    letter-spacing:-.035em;
+    margin:22px 0 0;
+  }
+  .grad{background:linear-gradient(100deg,var(--accent) 10%,var(--accent-2) 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{max-width:56ch;margin:20px 0 0;font-size:clamp(1rem,2.2vw,1.13rem);color:var(--muted)}
+
+  /* ---------- Countdown ---------- */
+  .countdown{display:flex;flex-wrap:wrap;gap:12px;margin:38px 0 0;padding:0;list-style:none}
+  .unit{
+    flex:1 1 110px;min-width:84px;
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:18px 12px;text-align:center;
+    backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  }
+  .unit b{
+    display:block;font-family:var(--font-head);font-weight:800;
+    font-size:clamp(1.9rem,5.5vw,2.6rem);line-height:1.1;letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums;
+  }
+  .unit span{display:block;margin-top:4px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .launch-note{margin:14px 0 0;font-size:.86rem;color:var(--muted)}
+
+  /* ---------- Notify form ---------- */
+  .notify{margin:34px 0 0;max-width:560px}
+  .notify h2{font-family:var(--font-head);font-size:1.05rem;font-weight:700;margin:0 0 10px;letter-spacing:-.01em}
+  .field{display:flex;gap:10px;flex-wrap:wrap}
+  .field input{
+    flex:1 1 240px;min-width:0;
+    padding:14px 16px;
+    font:inherit;font-size:.95rem;color:var(--text);
+    background:var(--surface);border:1px solid var(--border);border-radius:12px;
+    transition:border-color .2s,background .2s;
+  }
+  .field input::placeholder{color:#7b86a6}
+  .field input:focus{outline:none;border-color:var(--accent);background:var(--surface-2)}
+  .field button{
+    flex:0 0 auto;
+    padding:14px 26px;
+    font-family:var(--font-head);font-size:.95rem;font-weight:700;
+    color:var(--contrast);
+    background:linear-gradient(120deg,var(--accent),var(--accent-2));
+    border:0;border-radius:12px;cursor:pointer;
+    transition:transform .15s,filter .2s,box-shadow .2s;
+  }
+  .field button:hover{filter:brightness(1.07);transform:translateY(-1px);box-shadow:0 10px 24px -12px rgba(91,140,255,.9)}
+  .field button:active{transform:translateY(0)}
+  .form-msg{min-height:1.4em;margin:12px 0 0;font-size:.88rem;color:var(--accent-2)}
+  .form-msg[data-state="error"]{color:var(--danger)}
+  .privacy{margin:6px 0 0;font-size:.8rem;color:var(--muted)}
+
+  :where(a,button,input):focus-visible{outline:2px solid var(--accent-2);outline-offset:3px}
+
+  /* ---------- Features ---------- */
+  .features{margin:64px 0 0}
+  .features h2{
+    font-family:var(--font-head);font-size:.78rem;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 18px;
+  }
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:14px;padding:0;margin:0;list-style:none}
+  .card{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:22px;
+    transition:border-color .25s,background .25s,transform .25s;
+  }
+  .card:hover{border-color:var(--border-strong);background:var(--surface-2);transform:translateY(-3px)}
+  .icon{
+    width:40px;height:40px;display:grid;place-items:center;
+    border-radius:11px;background:rgba(91,140,255,.14);color:var(--accent-2);
+    margin-bottom:14px;
+  }
+  .icon svg{width:20px;height:20px;display:block}
+  .card h3{font-family:var(--font-head);font-size:1rem;font-weight:700;margin:0 0 6px;letter-spacing:-.01em}
+  .card p{margin:0;font-size:.9rem;color:var(--muted)}
+
+  /* ---------- Footer ---------- */
+  footer{
+    margin:72px 0 0;padding:26px 0 36px;
+    border-top:1px solid var(--border);
+    display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+    font-size:.84rem;color:var(--muted);
+  }
+  footer a{text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+  footer a:hover{color:var(--text);border-bottom-color:var(--accent-2)}
+
+  @media (max-width:520px){
+    main{padding-top:38px}
+    .unit{flex:1 1 calc(50% - 6px)}
+    .field button{width:100%}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+    .card:hover,.field button:hover{transform:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="bar">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/><path d="M22 8v6"/>
+          </svg>
+        </span>
+        <span>School CRM<small>Student information system</small></span>
+      </div>
+      <a class="contact-link" href="mailto:hello@schoolcrm.example">Talk to us</a>
+    </div>
+  </header>
+
+  <main>
+    <span class="badge"><span class="dot" aria-hidden="true"></span>Coming soon</span>
+
+    <h1>Run your school on<br><span class="grad">one calm dashboard.</span></h1>
+
+    <p class="lede">
+      Admissions, attendance, fee collection, grade books and parent messaging —
+      currently spread across registers, spreadsheets and WhatsApp groups. We are
+      building the single place where they finally live together.
+    </p>
+
+    <!-- Countdown -->
+    <ul class="countdown" id="countdown" aria-live="polite" aria-label="Time remaining until launch">
+      <li class="unit"><b id="d">--</b><span>Days</span></li>
+      <li class="unit"><b id="h">--</b><span>Hours</span></li>
+      <li class="unit"><b id="m">--</b><span>Minutes</span></li>
+      <li class="unit"><b id="s">--</b><span>Seconds</span></li>
+    </ul>
+    <p class="launch-note">Public beta opens <time id="launch-date" datetime="2026-12-01">1 December 2026</time>.</p>
+
+    <!-- Notify -->
+    <section class="notify" aria-labelledby="notify-title">
+      <h2 id="notify-title">Get told the day it opens</h2>
+      <form id="notify-form" novalidate>
+        <div class="field">
+          <label class="sr-only" for="email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Email address</label>
+          <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="principal@yourschool.edu" required>
+          <button type="submit">Notify me</button>
+        </div>
+        <p class="form-msg" id="form-msg" role="status"></p>
+        <p class="privacy">One email at launch. No newsletter, no sharing your address.</p>
+      </form>
+    </section>
+
+    <!-- Features -->
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">What ships in v1</h2>
+      <ul class="grid">
+
+        <li class="card">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/>
+            </svg>
+          </span>
+          <h3>Admissions</h3>
+          <p>Enquiry to enrolment in one pipeline — online forms, document checklist and seat allotment.</p>
+        </li>
+
+        <li class="card">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/>
+            </svg>
+          </span>
+          <h3>Attendance</h3>
+          <p>Period-wise marking on any phone, with automatic absence alerts to parents before first break.</p>
+        </li>
+
+        <li class="card">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/>
+            </svg>
+          </span>
+          <h3>Fees &amp; invoicing</h3>
+          <p>Term plans, concessions, online payment links and a receipt trail your accountant will accept.</p>
+        </li>
+
+        <li class="card">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M10 7h6"/>
+            </svg>
+          </span>
+          <h3>Gradebook</h3>
+          <p>Exam schemes, marks entry, weighted grading and report cards that print the way your board wants.</p>
+        </li>
+
+        <li class="card">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/><path d="M8 9h8M8 13h5"/>
+            </svg>
+          </span>
+          <h3>Parent portal</h3>
+          <p>Attendance, marks, fee dues and circulars in one login — instead of six broadcast groups.</p>
+        </li>
+
+        <li class="card">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/><path d="M7 16v-5M12 16V7M17 16v-8"/>
+            </svg>
+          </span>
+          <h3>Reports</h3>
+          <p>Strength, collection and result dashboards — exportable the morning an inspection is announced.</p>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year">2026</span> School CRM. All rights reserved.</span>
+    <span>Questions? <a href="mailto:hello@schoolcrm.example">hello@schoolcrm.example</a></span>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---- Launch date: change this one line to move the countdown ---- */
+  var LAUNCH = new Date('2026-12-01T09:00:00Z');
+
+  var out = { d: document.getElementById('d'), h: document.getElementById('h'),
+              m: document.getElementById('m'), s: document.getElementById('s') };
+  var pad = function (n) { return n < 10 ? '0' + n : String(n); };
+
+  function tick() {
+    var left = LAUNCH - new Date();
+
+    if (left <= 0) {
+      out.d.textContent = out.h.textContent = out.m.textContent = out.s.textContent = '00';
+      document.querySelector('.badge').lastChild.textContent = 'We are live';
+      clearInterval(timer);
+      return;
+    }
+
+    var sec = Math.floor(left / 1000);
+    out.d.textContent = pad(Math.floor(sec / 86400));
+    out.h.textContent = pad(Math.floor(sec / 3600) % 24);
+    out.m.textContent = pad(Math.floor(sec / 60) % 60);
+    out.s.textContent = pad(sec % 60);
+  }
+
+  tick();
+  var timer = setInterval(tick, 1000);
+
+  /* Render the launch date in the visitor's own locale. */
+  var dateEl = document.getElementById('launch-date');
+  dateEl.textContent = LAUNCH.toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' });
+  dateEl.dateTime = LAUNCH.toISOString().slice(0, 10);
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---- Notify form ----
+     No backend is wired up yet: the address is kept in this browser only and
+     nothing is sent anywhere. Point the form at a real endpoint before launch. */
+  var form = document.getElementById('notify-form');
+  var input = document.getElementById('email');
+  var msg = document.getElementById('form-msg');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var value = input.value.trim();
+
+    if (!value || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value)) {
+      msg.dataset.state = 'error';
+      msg.textContent = 'That does not look like an email address — mind checking it?';
+      input.focus();
+      return;
+    }
+
+    try {
+      var list = JSON.parse(localStorage.getItem('schoolcrm.notify') || '[]');
+      if (list.indexOf(value) === -1) { list.push(value); }
+      localStorage.setItem('schoolcrm.notify', JSON.stringify(list));
+    } catch (err) {
+      /* Private mode or blocked storage — the confirmation still stands. */
+    }
+
+    delete msg.dataset.state;
+    msg.textContent = 'Thanks — ' + value + ' is on the list. We will write once, on launch day.';
+    form.reset();
+  });
+})();
+</script>
+
+</body>
+</html>
